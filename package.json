@@ -1,0 +1,21 @@
+{
+  "name": "team-twist",
+  "version": "1.0.0",
+  "description": "pre release of team twist app",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Nima Ra",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "colors": "^1.3.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "md5": "^2.2.1",
+    "mysql": "^2.15.0",
+    "nodemailer": "^4.6.5",
+    "cookie-parser": "latest"
+  }
+}
