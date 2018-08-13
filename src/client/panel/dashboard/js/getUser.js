@@ -16,8 +16,6 @@ $(document).ready( () => {
       $("#top-user-img").attr('src', `/panel/dashboard/img/person.png`);
     }
 
-    $("#user-account-name").append(data.username);
-    $("#user-account-name").attr('href', `/settings/${data.username}`);
-
+    $("#user-settings").attr('href', `/settings/${data.username}`);
   });
 });

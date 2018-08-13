@@ -53,6 +53,7 @@ api.changeEmail(db, app);
 api.changePhone(db, app);
 api.changePhoto(db, app);
 api.getProjects(db, app);
+api.revokeToken(db, app);
 api.getMembers(db, app);
 api.changeName(db, app);
 api.verifyUser(db, app);
@@ -62,6 +63,7 @@ api.getTodos(db, app);
 api.getUser(db, app);
 api.charge(db, app);
 api.sendPicture(app);
+
 
 // Panel
 panel.dashboard(db, app);

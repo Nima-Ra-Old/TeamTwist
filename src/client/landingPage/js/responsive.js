@@ -1,4 +1,19 @@
+function getCookie(name) {
+  var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
+  var result = regexp.exec(document.cookie);
+  return (result === null) ? null : result[1];
+}
+
+var token = getCookie('token') ? getCookie('token') : null;
+
 $(document).ready(() => {
+
+  if (token) {
+    $("#top-login").text('پنل');
+    $("#login-a").attr('href', '/panel');
+    $("#top-signup").css('visibility', 'hidden');
+  }
+
   if ($( window ).width() < 768){
     setInterval(() => {
       $("#scroll-down").fadeToggle('slow', "linear");

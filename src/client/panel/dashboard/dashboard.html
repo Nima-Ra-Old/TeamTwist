@@ -4,11 +4,11 @@
   <title>داشبورد</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" type="text/css" href="/panel/dashboard/main.css">
   <link rel="stylesheet" href="/css/material.min.css" type="text/css">
   <script src="/js/material.min.js"></script>
   <script src="/js/jquery.min.js"></script>
   <script src="/panel/dashboard/js/getUser.js"></script>
+  <link rel="stylesheet" type="text/css" href="/panel/dashboard/main.css">
 </head>
 <body>
 
@@ -18,35 +18,38 @@
       <i class="fa fa-bars"></i>
     </button>
 
-    <div id="top-user">
+    <button id="user-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
       <img id="top-user-img">
-      <i id="top-user-dropdown" class="fa fa-caret-down"></i>
-
-
-    </div>
+      <i class="fa fa-caret-down"></i>
+    </button>
 
   </header>
 
-  <div id="account-dropdown-menu">
+  <div id="dropdown-div">
+
     <ul id="dropdown-ul">
       <li class="dropdown-li">
-
-        <a class="dropdown-a" id="user-account-name">
-          <i class="fa fa-user dropdown-i"></i>
+        <a id="user-settings">
+          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+            <i class="dropdown-i fa fa-user"></i>
+            <span class="dropdown-text">تنظیمات</span>
+          </button>
         </a>
-
       </li>
 
       <li class="dropdown-li">
-        <a class="dropdown-a" id="user-account-logout" style="font-family: yekan; font-weight: bold">
-          <i class="fa fa-power-off dropdown-i"></i>
-          خروج
+        <a id="user-logout">
+          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+            <i class="dropdown-i fa fa-power-off"></i>
+            <span class="dropdown-text">خروج</span>
+          </button>
         </a>
       </li>
     </ul>
-  </div>
 
+  <div>
 
   <script src="/panel/dashboard/js/dropdown.js"></script>
+  <script src="/panel/dashboard/js/logout.js"></script>
 </body>
 </html>

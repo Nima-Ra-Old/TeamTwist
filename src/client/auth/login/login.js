@@ -22,10 +22,9 @@ $(document).ready(function() {
     $.post("http://127.0.0.1:8545/login", {email: email, password: pwd}, (data) => {
       if (data.reqStatus == 'failed') {
         alert("کاربر یافت نشد. مطمئن شوید که ورودی ها را صحیح پر کرده اید و اکانت شما تایید شده است.");
-        window.location.replace("http://127.0.0.1:8545/login");
+        window.location.reload();
       } else {
-        alert("با موفقیت وارد شدید");
-        window.location.replace("http://127.0.0.1:8545/panel");
+        window.location=window.location.href.split('/login')[0]+'/panel';
       }
     });
     return false;
