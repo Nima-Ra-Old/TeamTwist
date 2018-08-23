@@ -122,5 +122,20 @@ header {
   float: right;
   height: 100%;
   width: 15%;
+  min-width: 200px;
   background: #f3f3f3;
+  display: none;
+}
+
+#right-menu-ul {
+  padding: 0;
+}
+
+.right-menu-li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.right-menu-text {
+  font-size: 18px;
 }
