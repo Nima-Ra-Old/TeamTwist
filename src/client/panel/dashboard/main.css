@@ -147,3 +147,39 @@ header {
 .right-menu-i {
   float: right;
 }
+
+#todo-card {
+  background: #f3f3f3;
+  min-width: 300px;
+  max-height: 70%;
+  margin: 20px 10px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+#todos {
+  padding: 5px;
+  display: inline-block;
+}
+
+h5 {
+  float: right;
+  text-align: center;
+  direction: rtl;
+  font-family: yekan;
+  margin: 5px 0;
+  display: block;
+  width: 100%;
+  border-bottom: 1px #ccc solid;
+}
+
+#add-todo {
+  width: 100%;
+  direction: rtl;
+  padding: 0;
+  background: #57b846;
+  font-weight: bold;
+  font-family: yekan;
+  color: #000;
+  font-size: 18px;
+}
