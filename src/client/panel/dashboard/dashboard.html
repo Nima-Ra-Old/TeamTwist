@@ -8,19 +8,20 @@
   <script src="/js/material.min.js"></script>
   <script src="/js/jquery.min.js"></script>
   <script src="/panel/dashboard/js/getUser.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/hover-min.css">
   <link rel="stylesheet" type="text/css" href="/panel/dashboard/main.css">
 </head>
 <body>
 
   <header>
 
-    <button id="menu-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-      <i class="fa fa-bars"></i>
+    <button id="menu-button" class="mdl-button hvr-icon-drop mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        <i class="menu-bars hvr-icon fa fa-bars"></i>
     </button>
 
-    <button id="user-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+    <button id="user-button" class="mdl-button hvr-icon-pop mdl-js-button mdl-button--raised mdl-js-ripple-effect">
       <img id="top-user-img">
-      <i class="fa fa-caret-down"></i>
+      <i class="fa fa-caret-down hvr-icon"></i>
     </button>
 
   </header>
@@ -29,7 +30,7 @@
 
     <ul id="dropdown-ul">
       <li class="dropdown-li">
-        <a id="user-settings">
+        <a id="user-settings" href="/settings">
           <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
             <i class="dropdown-i fa fa-user"></i>
             <span class="dropdown-text">تنظیمات</span>
@@ -53,32 +54,36 @@
     <ul id="right-menu-ul">
 
       <li class="right-menu-li">
-        <a>
-          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+        <a class="right-menu-a" href="/panel">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-tachometer-alt"></i>
             <span class="right-menu-text">داشبورد</span>
           </button>
         </a>
       </li>
 
       <li class="right-menu-li">
-        <a>
-          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+        <a class="right-menu-a" href="/settings">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-cog"></i>
             <span class="right-menu-text">تنظیمات</span>
           </button>
         </a>
       </li>
 
       <li class="right-menu-li">
-        <a>
-          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+        <a class="right-menu-a" href="/teams">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-user-friends"></i>
             <span class="right-menu-text">تیم ها</span>
           </button>
         </a>
       </li>
 
       <li class="right-menu-li">
-        <a>
-          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+        <a class="right-menu-a" href="/projects">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-chart-pie"></i>
             <span class="right-menu-text">پروژه ها</span>
           </button>
         </a>

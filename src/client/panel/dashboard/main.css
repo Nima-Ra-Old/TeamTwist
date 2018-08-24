@@ -60,7 +60,7 @@ header {
   position: relative;
 }
 
-#menu-button i {
+.menu-bars {
   font-size: 18px;
 }
 
@@ -125,6 +125,9 @@ header {
   min-width: 200px;
   background: #f3f3f3;
   display: none;
+  -webkit-box-shadow: -23px 22px 47px -9px rgba(0,0,0,0.44);
+  -moz-box-shadow: -23px 22px 47px -9px rgba(0,0,0,0.44);
+  box-shadow: -23px 22px 47px -9px rgba(0,0,0,0.44);
 }
 
 #right-menu-ul {
@@ -134,8 +137,13 @@ header {
 .right-menu-li {
   list-style: none;
   margin: 10px 0;
+  border-right: #0c9e61 5px solid;
 }
 
 .right-menu-text {
   font-size: 18px;
+}
+
+.right-menu-i {
+  float: right;
 }
