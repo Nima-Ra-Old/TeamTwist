@@ -12,7 +12,7 @@ function getTodos(db, app){
 
 				let email = userRes[0].email;
 				// now we can get the todos
-				let get_todo = `SELECT todo FROM todo WHERE email='${email}'`;
+				let get_todo = `SELECT id, todo FROM todo WHERE email='${email}'`;
 
 				db.query(get_todo, (todoErr, todoRes, todoFld) => {
 					if (todoErr) console.log(todoErr);
@@ -21,7 +21,7 @@ function getTodos(db, app){
 						let result = [];
 
 						for (var i = 0; i < todoRes.length; i++) {
-							result.push(todoRes[i].todo);
+							result.push({id: todoRes[i].id, todo: todoRes[i].todo});
 						}
 
 						res.json({
