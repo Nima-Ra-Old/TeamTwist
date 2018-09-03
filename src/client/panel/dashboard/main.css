@@ -148,6 +148,11 @@ header {
   float: right;
 }
 
+#container {
+  width: 100%;
+  height: 100%;
+}
+
 #todo-card {
   background: #f3f3f3;
   min-width: 300px;
@@ -155,31 +160,53 @@ header {
   margin: 20px 10px;
   display: inline-block;
   border-radius: 3px;
+  float: right;
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+}
+
+#todo-header {
+  background: #ccc;
+  border-radius: 3px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+
+#todo-header span {
+  font-family: 'Mukta', sans-serif;
+  font-size: 22px;
 }
 
 #todos {
-  padding: 5px;
-  display: inline-block;
+  background: #FFF;
+  border-radius: 3px;
 }
 
-h5 {
-  float: right;
-  text-align: center;
-  direction: rtl;
-  font-family: yekan;
-  margin: 5px 0;
-  display: block;
+#todos-ul {
+  padding: 10px;
+}
+
+.todos-li {
+  list-style: none;
   width: 100%;
-  border-bottom: 1px #ccc solid;
+}
+
+.todos-span {
+  float: right;
+  direction: rtl;
 }
 
 #add-todo {
   width: 100%;
-  direction: rtl;
-  padding: 0;
-  background: #57b846;
-  font-weight: bold;
   font-family: yekan;
-  color: #000;
+  direction: rtl;
   font-size: 18px;
+  display: none;
+}
+
+#add-todo-i {
+  font-size: 12px;
 }

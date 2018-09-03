@@ -4,6 +4,7 @@
   <title>داشبورد</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
   <link rel="stylesheet" href="/css/material.min.css" type="text/css">
   <script src="/js/material.min.js"></script>
   <script src="/js/jquery.min.js"></script>
@@ -95,19 +96,27 @@
 
   <div id="container">
     <div id="todo-card">
-      <h5>تودو منیجر</h5>
-      <div id="todos">
-        <div class="todo">
-          <span class="todo-text">مثلا این</span>
-        </div>
+
+      <div id="todo-header">
+        <span>Todo Manager</span>
       </div>
-      <buttom id="add-todo" class="mdl-button mdl-js-button mdl-js-ripple-effect">الان اضافه کنید!</buttom>
+
+      <div id="todos">
+        <ul id="todos-ul">
+        </ul>
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="add-todo">
+          چیزی ثبت نشده، الان <i class="material-icons add-todo-i">add</i> کنید.
+        </button>
+      </div>
+
     </div>
   </div>
 
   <script src="/panel/dashboard/js/right-menu.js"></script>
   <script src="/panel/dashboard/js/dropdown.js"></script>
   <script src="/panel/dashboard/js/logout.js"></script>
+  <script src="/panel/dashboard/js/getTodos.js"></script>
+
 
 </body>
 </html>
