@@ -1,30 +1,54 @@
 function getTodos(db, app){
 	app.post("/api/getTodos", function(req, res, next){
-  		let user_id = req.query.user_id;
-  		if (user_id != undefined){
-			db.query("SELECT `todo` FROM `todo` WHERE `user_id`='" + user_id + "'", function(error, results, fields){
-     			if (error) throw error;
-       		if (results.length == 0){
-            results = {
-              status: "You have no todos"
-            }
-            res.json(results);
-          }
-          else {
-            res.json(results);
-          }
-    		});
-  		}
-  		else {
-			res.json({
-				error: "Parameters are missed"
-			});
-		}
-  	});
 
-  	app.get("/api/getTodos", function(req, res, next){
-  		res.send("Documentation For Get User")
-  	});
+		var token = req.body.user_token;
+		if (token) {
+			let get_user = `SELECT email FROM sessions WHERE token='${token}'`;
+			db.query(get_user, (userErr, userRes, userFld) => {
+
+				if (userErr) console.log(userErr);
+
+				if (userRes[0]) {
+
+				let email = userRes[0].email;
+				// now we can get the todos
+				let get_todo = `SELECT todo FROM todo WHERE email='${email}'`;
+
+				db.query(get_todo, (todoErr, todoRes, todoFld) => {
+					if (todoErr) console.log(todoErr);
+
+					if (todoRes[0]) {
+						let result = [];
+
+						for (var i = 0; i < todoRes.length; i++) {
+							result.push(todoRes[i].todo);
+						}
+
+						res.json({
+							res: 'Ok',
+							todo: result
+						});
+
+					} else {
+						res.json({
+							res: '404'
+						});
+					}
+				});
+
+				} else {
+					res.json({
+						res: "Wrong token"
+					});
+				}
+
+			});
+		} else {
+		res.json({
+			res: "Token is not passed as a parameter"
+		});
+	}
+})
 }
 
 module.exports = {
