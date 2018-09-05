@@ -63,7 +63,7 @@ api.getTodos(db, app);
 api.getUser(db, app);
 api.charge(db, app);
 api.sendPicture(app);
-
+api.deleteTodo(db, app);
 
 // Panel
 panel.dashboard(db, app);
