@@ -6,18 +6,24 @@ function getCookie(name) {
 
 function checkTodo(i) {
   var todo_id = "#todo-"+i;
-  $(todo_id).fadeOut('fast', () => {
-    $(todo_id).remove();
 
-    if ($(".todos-li").length == 0) {
-      $("#todos-ul").css('display', 'none');
-      $("#add-todo").css('display', 'block');
-    }
+  $.post('/api/deleteTodo', {user_token: token , todo_id: i}, (data) => {
+    let result = data.res;
 
-    $.post('/api/deleteTodo', {user_token: token, id: i}, (data) => {
-      // TODO: add the api file for deleting todos and complete here :)
+    if (result == 'deleted') {
+
+      $(todo_id).fadeOut('fast', () => {
+        $(todo_id).remove();
+
+        if ($(".todos-li").length == 0) {
+          $("#todos-ul").css('display', 'none');
+          $("#add-todo").css('display', 'block');
+        }
     });
-  });
+  } else {
+    alert("حذف ناموفق بود. دوباره تلاش کنید");
+  }
+});
 }
 
 var token = getCookie('token');
@@ -39,8 +45,9 @@ $(document).ready(() => {
       }
 
     } else if (data.res == '404'){
+      $("#todos-ul").css('display', 'none');
       $("#add-todo").css('display', 'block');
     }
 
-  });
-});
+  })
+})
