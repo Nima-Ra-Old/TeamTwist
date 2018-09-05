@@ -32,7 +32,7 @@ $(document).ready(() => {
   $.post('/api/getTodos', {user_token: token}, (data) => {
 
     if (data.res == 'Ok') {
-
+      let todoLength = data.todo.length > 10 ? 10 : data.todo.length;
       for (var i = 0; i < data.todo.length; i++) {
         let todo_element =
         `<li class="todos-li" id="todo-${data.todo[i].id}">
