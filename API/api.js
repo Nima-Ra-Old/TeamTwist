@@ -22,6 +22,7 @@ const charge = require('./api_modules/charge.js');
 const sendPicture = require('./api_modules/sendPicture.js');
 const revokeToken = require('./api_modules/revokeToken.js');
 const deleteTodo = require('./api_modules/deleteTodo.js');
+const addTodo = require('./api_modules/addTodo.js');
 
 
 let apiLoader = {
@@ -99,6 +100,10 @@ let apiLoader = {
   },
   deleteTodo: function (db, app){
     var method = deleteTodo.deleteTodo(db, app);
+    return method;
+  },
+  addTodo: function (db, app){
+    var method = addTodo.addTodo(db, app);
     return method;
   }
 }
