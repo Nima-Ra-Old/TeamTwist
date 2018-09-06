@@ -210,3 +210,37 @@ header {
 #add-todo-i {
   font-size: 12px;
 }
+
+#add-todo-form {
+  display: none;
+}
+
+#add-todo-input {
+  width: 96%;
+  border: 0;
+  padding: 5px 2%;
+  direction: rtl;
+  float: right;
+  background: #f3f3f3;
+  outline: none;
+}
+
+#add-todo-input::placeholder {
+  color: #000;
+}
+
+#add-todo-cancel , #add-todo-ok {
+  width: 50%;
+  display: inline-block;
+}
+
+#add-todo-cancel {
+  float: left;
+}
+
+#add-todo-always {
+  width: 100%;
+  background-color: #ccc;
+  font-family: yekan;
+  font-size: 20px;
+}
