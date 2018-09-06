@@ -11,7 +11,7 @@ var db = mysql.createConnection({
 
 db.connect(function(err) {
   if (err) {
-    onsole.error('error connecting to database [TT]: '.red + err.stack.green);
+    console.error('error connecting to database [TT]: '.red + err.stack.green);
     return;
   }
 });
