@@ -11,14 +11,14 @@ function updateTodos() {
       let todoLength = data.todo.length > 10 ? 10 : data.todo.length;
       for (var i = 0; i < data.todo.length; i++) {
         if ($("#todo-"+data.todo[i].id).length == 0 ){
+          let todo_val = data.todo[i].todo.length > 27 ? data.todo[i].todo.substr(0, 27) + '...' : data.todo[i].todo;
           let todo_element =
           `<li class="todos-li" id="todo-${data.todo[i].id}">
-          <span class="todos-span"><span class="ordinary">${$(".todos-li").length + 1}.</span> ${data.todo[i].todo}</span>
-          <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onClick="checkTodo(${data.todo[i].id})">
-          <i class="material-icons">check</i>
-          </button>
+            <span class="todos-span"><span class="ordinary">${$(".todos-li").length + 1}.</span> ${todo_val}</span>
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onClick="checkTodo(${data.todo[i].id})">
+              <i class="material-icons">check</i>
+            </button>
           </li>`;
-
           $("#todos-ul").append(todo_element);
         }
       }
