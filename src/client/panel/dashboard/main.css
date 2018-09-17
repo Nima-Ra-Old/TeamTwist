@@ -153,20 +153,7 @@ header {
   height: 100%;
 }
 
-#todo-card {
-  background: #f3f3f3;
-  min-width: 300px;
-  max-height: 70%;
-  margin: 20px 10px;
-  display: inline-block;
-  border-radius: 3px;
-  float: right;
-  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
-  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
-}
-
-#todo-header {
+.box-headers {
   background: #ccc;
   border-radius: 3px;
   width: 100%;
@@ -243,4 +230,55 @@ header {
   background-color: #ccc;
   font-family: yekan;
   font-size: 20px;
+}
+
+.boxes {
+  background: #f3f3f3;
+  min-width: 300px;
+  max-height: 70%;
+  margin: 20px 10px;
+  display: inline-block;
+  border-radius: 3px;
+  float: right;
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+}
+
+#account-statistics {
+  background: #FFF;
+  float: left;
+  min-height: 70%;
+}
+
+#account-contents {
+  padding: 5px;
+}
+
+#account-header span {
+  font-family: yekan;
+  font-size: 24px;
+}
+
+#profile-photo {
+  display: inline-block;
+}
+
+#profile-img {
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.persian {
+  float: right;
+  font-family: yekan;
+  direction: rtl;
+}
+
+#account-username-content {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  padding-top: 10px;
 }

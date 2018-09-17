@@ -2,15 +2,22 @@
 <html>
 <head>
   <title>داشبورد</title>
+  <!-- Fonts -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/css/material.min.css" type="text/css">
   <script src="/js/material.min.js"></script>
+  <!-- jQuery -->
   <script src="/js/jquery.min.js"></script>
-  <script src="/panel/dashboard/js/getUser.js"></script>
+  <!-- Css libraries -->
   <link rel="stylesheet" type="text/css" href="/css/hover-min.css">
+
+  <!-- Team Twist's libraries -->
   <link rel="stylesheet" type="text/css" href="/panel/dashboard/main.css">
+  <script src="/panel/dashboard/js/getUser.js"></script>
 </head>
 <body>
 
@@ -95,9 +102,10 @@
   </div>
 
   <div id="container">
-    <div id="todo-card">
 
-      <div id="todo-header">
+    <div class="boxes" id="todo-card">
+
+      <div class="box-headers" id="todo-header">
         <span>Todo Manager</span>
       </div>
 
@@ -130,7 +138,35 @@
       </div>
 
     </div>
+
+    <div class="boxes" id="account-statistics">
+
+      <div class="box-headers" id="account-header">
+        <span>اکانت شما</span>
+      </div>
+
+      <div id="account-contents">
+
+        <div id="profile-photo">
+          <img id="profile-img">
+        </div>
+
+        <span class="persian" id="account-username">
+          نام کاربری: <span id="account-username-content"><span>
+        </span>
+
+        <span class="persian" id="account-teams">
+          تیم ها:
+          <span id="account-teams-count"></span>
+        </span>
+
+
+      </div>
+
+    </div>
+
   </div>
+
 
 
   <script src="/panel/dashboard/js/right-menu.js"></script>

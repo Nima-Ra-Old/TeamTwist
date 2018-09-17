@@ -11,9 +11,14 @@ $(document).ready( () => {
 
     if (data.profilePic){
       $("#top-user-img").attr('src', `/profile_photos?profilePic=${data.profilePic}`);
+      $("#profile-img").attr('src', `/profile_photos?profilePic=${data.profilePic}`);
     }
     else {
       $("#top-user-img").attr('src', `/panel/dashboard/img/person.png`);
+      $("#profile-img").attr('src', `/panel/dashboard/img/person.png`);
     }
+
+    $("#account-username-content").text(data.username);
+    $("#account-teams-count").text(data.teams);
   });
 });

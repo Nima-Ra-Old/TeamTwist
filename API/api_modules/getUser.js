@@ -14,7 +14,7 @@ function getUser(db, app){
 
 						// token exists
 						let email = sessionRes[0].email;
-						let user_details = `SELECT email, username, verify, profilePic, phone, lastActivity, joinDate
+						let user_details = `SELECT email, username, verify, profilePic, phone, teams, lastActivity, joinDate
 						FROM users
 						WHERE email='${email}'`;
 
