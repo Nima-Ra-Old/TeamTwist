@@ -10,8 +10,8 @@ $(document).ready( () => {
   $.post('/api/getUser', {user_token: token}, (data) => {
 
     if (data.profilePic){
-      $("#top-user-img").attr('src', `/profile_photos?profilePic=${data.profilePic}`);
-      $("#profile-img").attr('src', `/profile_photos?profilePic=${data.profilePic}`);
+      $("#top-user-img").attr('src', `/api/photos?profilePic=${data.profilePic}`);
+      $("#profile-img").attr('src', `/api/photos?profilePic=${data.profilePic}`);
     }
     else {
       $("#top-user-img").attr('src', `/panel/dashboard/img/person.png`);

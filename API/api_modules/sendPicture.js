@@ -1,5 +1,5 @@
 function sendPicture(app) {
-  app.get('/profile_photos', (req, res, next) => {
+  app.get('/api/photos', (req, res, next) => {
     let picture = req.query.profilePic ? `documents/profile-images/${req.query.profilePic}.jpg` : `documents/team-images/${req.query.teamPic}.jpg`;
     res.sendFile(picture, {root: './'});
   });

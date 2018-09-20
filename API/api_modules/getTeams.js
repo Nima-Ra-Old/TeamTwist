@@ -11,16 +11,16 @@ function getTeams(db, app){
 					if (tokenRes[0]) {
 						let email = tokenRes[0].email;
 
-						db.query(`SELECT * FROM teams WHERE email='${email}'`, function(error, results, fields){
-			     			if (error) throw error;
-			       		if (results.length == 0){
-			            results = {
-			              res: "You have no team"
-			            }
-			            res.json(results);
+						db.query(`SELECT * FROM teams WHERE email='${email}'`, function(teamsErr, teamsRes, teamsFld){
+			     			if (teamsErr) throw teamsErr;
+
+			       		if (teamsRes[0]){
+									res.json(teamsRes);
 			          }
 			          else {
-			            res.json(results);
+									res.json({
+										res: "You have no team"
+									});
 			          }
 			    		});
 
