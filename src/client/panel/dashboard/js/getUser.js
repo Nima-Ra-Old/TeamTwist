@@ -19,6 +19,7 @@ $(document).ready( () => {
     }
 
     $("#account-username-content").text(data.username);
-    $("#account-teams-count").text(data.teams);
+    $("#account-followers-count").text(data.followers);
+    $("#account-following-count").text(data.following);
   });
 });
