@@ -1,7 +1,7 @@
 function sendPicture(app) {
   app.get('/profile_photos', (req, res, next) => {
-    let profilePic = req.query.profilePic;
-    res.sendFile(`users/profile-images/${profilePic}.jpg`, {root: './'});
+    let picture = req.query.profilePic ? `documents/profile-images/${req.query.profilePic}.jpg` : `documents/team-images/${req.query.teamPic}.jpg`;
+    res.sendFile(picture, {root: './'});
   });
 }
 
