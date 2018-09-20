@@ -9,14 +9,13 @@ var token = getCookie('token');
 $(document).ready( () => {
   $.post('/api/getTeams', {user_token: token}, (data) => {
     if (data.res == 'You have no team') {
-      
+
     } else {
       for (var i = 0; i < data.length; i++) {
         let element = `
         <li class="account-teams-li">
-          <span class="account-teams-name">${data[i].name}</span>
           <a class="account-teams-a">
-            <img class="account-teams-img" src="/api/photos?teamPic=${data[i].picture}">
+            <img class="account-teams-img" src="/api/photos?teamPic=${data[i].picture}" alt="${data[i].name}">
           </a>
         </li>`;
 
