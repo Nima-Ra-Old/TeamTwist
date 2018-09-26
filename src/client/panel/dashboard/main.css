@@ -261,7 +261,20 @@ header {
 }
 
 #profile-photo {
-  display: inline-block;
+  display: inline-flex;
+  position: relative;
+}
+
+#profile-photo:hover {
+  cursor: pointer;
+}
+
+#change-photo {
+  position: absolute;
+  font-size: 32px;
+  right: 35%;
+  top: 35%;
+  display: none;
 }
 
 #profile-img {
