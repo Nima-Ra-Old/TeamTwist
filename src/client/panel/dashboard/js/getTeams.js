@@ -9,7 +9,7 @@ var token = getCookie('token');
 $(document).ready( () => {
   $.post('/api/getTeams', {user_token: token}, (data) => {
     if (data.res == 'You have no team') {
-
+      $("#team-notfound").css('display', 'block');
     } else {
       var items = data.length > 6 ? 6 : data.length;
       for (var i = 0; i < items; i++) {

@@ -248,7 +248,7 @@ header {
 #account-statistics {
   background: #FFF;
   float: left;
-  min-height: 250px;
+  max-height: 250px;
 }
 
 #account-contents {
@@ -348,4 +348,13 @@ header {
   direction: rtl;
   font-size: 18px;
   background: #ffb100;
+}
+
+#team-notfound {
+  text-align: center;
+  direction: rtl;
+  margin: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: none;
 }
