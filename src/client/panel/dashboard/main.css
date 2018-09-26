@@ -248,7 +248,7 @@ header {
 #account-statistics {
   background: #FFF;
   float: left;
-  min-height: 70%;
+  min-height: 250px;
 }
 
 #account-contents {
@@ -340,4 +340,12 @@ header {
   vertical-align: middle;
   border-radius: 3px;
   background: #fff;
+}
+
+#add-team {
+  width: 100%;
+  font-family: yekan;
+  direction: rtl;
+  font-size: 18px;
+  background: #ffb100;
 }
