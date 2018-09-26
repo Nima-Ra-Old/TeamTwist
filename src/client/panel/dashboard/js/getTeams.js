@@ -11,7 +11,8 @@ $(document).ready( () => {
     if (data.res == 'You have no team') {
 
     } else {
-      for (var i = 0; i < data.length; i++) {
+      var items = data.length > 6 ? 6 : data.length;
+      for (var i = 0; i < items; i++) {
         let element = `
         <li class="account-teams-li">
           <a class="account-teams-a">
