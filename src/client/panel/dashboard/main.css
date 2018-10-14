@@ -368,4 +368,27 @@ header {
   box-sizing: border-box;
   padding: 10px;
   background-color: #fff;
+  padding: 0;
+}
+
+#radar-chart {
+  margin: 0 auto;
+  display: flex;
+}
+
+#radar-chart svg {
+  margin: 0 auto;
+}
+
+.legend {
+  font-family: yekan !important;
+  font-size: 16px !important;
+  font-weight: bold;
+}
+
+.legend_help {
+  border-radius: 50%;
+  background-color: #000;
+  width: 10px;
+  height: 10px;
 }
