@@ -1,3 +1,5 @@
+@import 'https://code.highcharts.com/css/highcharts.css';
+
 @font-face {
   font-family: Poppins-Regular;
   src: url('../../fonts/Poppins-Regular.ttf');
@@ -356,5 +358,19 @@ header {
   margin: 5px;
   width: 100%;
   margin-bottom: 10px;
+  display: none;
+}
+
+#activities {
+  width: 350px;
+}
+
+.activities-points {
+  font-family: yekan;
+  font-size: 12px;
+  color: black;
+}
+
+.highcharts-credits , .highcharts-button-symbol {
   display: none;
 }
