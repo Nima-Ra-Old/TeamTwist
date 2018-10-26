@@ -12,6 +12,7 @@ $(document).ready( () => {
     if (data.profilePic){
       $("#top-user-img").attr('src', `/api/photos?profilePic=${data.profilePic}`);
       $("#profile-img").attr('src', `/api/photos?profilePic=${data.profilePic}`);
+      $('.teams-activities-img').attr('src' , `/api/photos?profilePic=${data.profilePic}`)
     }
     else {
       $("#top-user-img").attr('src', `/panel/dashboard/img/person.png`);

@@ -1,5 +1,3 @@
-@import 'https://code.highcharts.com/css/highcharts.css';
-
 @font-face {
   font-family: Poppins-Regular;
   src: url('../../fonts/Poppins-Regular.ttf');
@@ -391,4 +389,56 @@ header {
   background-color: #000;
   width: 10px;
   height: 10px;
+}
+
+#teams-activities {
+  width: 335px;
+  background: #FFF;
+}
+
+#teams-activities-ul {
+  padding: 0;
+}
+
+.teams-activities-li {
+  list-style: none;
+  direction: rtl;
+  height: 40px;
+  padding: 2px;
+}
+
+.teams-activities-a {
+  direction: rtl;
+  float: right;
+  width: 100%;
+}
+
+.teams-activities-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  float: right;
+}
+
+.team-subject {
+  width: 100%;
+  font-family: yekan;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  background-color: green;
+  color: #FFF;
+}
+
+.teams-activities-span {
+  float: right;
+  color: #000;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.teams-activities-li:hover {
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 3px;
 }
