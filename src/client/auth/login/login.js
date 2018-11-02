@@ -19,7 +19,7 @@ $(document).ready(function() {
   $("#submit").click(function(){
     var email = $("#email").val();
     var pwd = $("#pwd").val();
-    $.post("http://127.0.0.1:8545/login", {email: email, password: pwd}, (data) => {
+    $.post(window.location.href+"/login", {email: email, password: pwd}, (data) => {
       if (data.reqStatus == 'failed') {
         alert("کاربر یافت نشد. مطمئن شوید که ورودی ها را صحیح پر کرده اید و اکانت شما تایید شده است.");
         window.location.reload();
