@@ -8,7 +8,7 @@ function getDeadlines (db, app) {
           res: 'parameters are missed'
         });
       } else {
-        let query = `SELECT * FROM sessions WHERE token=${token}`;
+        let query = `SELECT * FROM sessions WHERE token='${token}'`;
         db.query(query, (tokenErr, tokenRes, tokenFld) => {
           if (tokenErr) console.log(tokenErr);
 
