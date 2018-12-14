@@ -65,7 +65,7 @@ api.charge(db, app);
 api.sendPicture(app);
 api.deleteTodo(db, app);
 api.addTodo(db, app);
-
+api.getDeadlines(db, app);
 
 // Panel
 panel.dashboard(db, app);

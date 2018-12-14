@@ -23,7 +23,7 @@ const sendPicture = require('./api_modules/sendPicture.js');
 const revokeToken = require('./api_modules/revokeToken.js');
 const deleteTodo = require('./api_modules/deleteTodo.js');
 const addTodo = require('./api_modules/addTodo.js');
-
+const getDeadlines = require('./api_modules/getDeadlines.js');
 
 let apiLoader = {
   changePassword: function(db, app){
@@ -104,6 +104,10 @@ let apiLoader = {
   },
   addTodo: function (db, app){
     var method = addTodo.addTodo(db, app);
+    return method;
+  },
+  getDeadlines: function (db, app){
+    var method = getDeadlines.getDeadlines(db, app);
     return method;
   }
 }
