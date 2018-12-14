@@ -477,6 +477,28 @@ header {
 #tasks-header {
   float: right;
   color: #FFF;
-  margin: 10px 5px 0 0;
-  font-size: 20px;
+  margin: 10px 0;
+  font-size: 22px;
+  border-spacing: 12px;
+  border-bottom: 3px solid #43015b;
+  width: 100%;
+  text-align: center;
+}
+
+#not_tasks {
+  width: 100%;
+  text-align: center;
+}
+
+#not_tasks img {
+  width: 70%;
+}
+
+#not_tasks_span {
+  max-width: 50px;
+  background: #43015b;
+  border-radius: 4px;
+  padding: 5px;
+  width: 10px;
+  color: #FFF;
 }
