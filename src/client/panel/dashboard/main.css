@@ -479,8 +479,6 @@ header {
   color: #FFF;
   margin: 10px 0;
   font-size: 22px;
-  border-spacing: 12px;
-  border-bottom: 3px solid #43015b;
   width: 100%;
   text-align: center;
 }
@@ -501,4 +499,10 @@ header {
   padding: 5px;
   width: 10px;
   color: #FFF;
+}
+
+#tasks-display {
+  background: #20002b;
+  display: block;
+  height: 100%;
 }
