@@ -116,10 +116,11 @@
         </div>
       </div>
       <div id="tasks">
-        <span id="tasks-header">
-          تسک های امروز
-        </span>
         <div id="tasks-display">
+          <span id="tasks-header">
+            تسک های امروز
+          </span>
+          <!-- If there is not any tasks to do -->
           <div id="not_tasks">
             <img src="/panel/dashboard/img/umbrella.png">
             <br>
@@ -127,7 +128,29 @@
               استراحت کنید
             </span>
           </div>
+          <!-- End of not tasks statement -->
 
+          <!-- add task statements -->
+
+          <div id="add-task-div">
+            <textarea maxlength="80" class="task-input-class" id="task-input" placeholder="تسک را وارد کنید..."></textarea>
+
+            <input class="task-input-class" id="task-date-picker">
+          </div>
+
+          <!-- End of add tasks statements -->
+
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" id="add-task">
+            <i class="material-icons">add</i>
+          </button>
+
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" id="ok-task">
+            <i class="material-icons">check</i>
+          </button>
+
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" id="cancel-task">
+            <i class="material-icons">clear</i>
+          </button>
         </div>
       </div>
     </div>
@@ -233,7 +256,7 @@
   </div>
 
 
-
+  <script src="/js/date-converter.js"></script>
   <script src="/panel/dashboard/js/getDeadlines.js"></script>
   <script src="/panel/dashboard/js/right-menu.js"></script>
   <script src="/panel/dashboard/js/dropdown.js"></script>
