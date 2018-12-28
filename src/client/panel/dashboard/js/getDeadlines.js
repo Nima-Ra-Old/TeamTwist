@@ -70,7 +70,8 @@ $(document).ready(() => {
         // everything is fine :D lets send it to the API service!
         var task_text = $("#task-input").val();
         let task_date = $("#task-date-picker").val();
-        $.post('/api/addDeadline', {user_token: token, task: true, text: task_text, expire_date: task_date}, (result) => {
+        let task_team = $("#task-type option:selected").val();
+        $.post('/api/addDeadline', {user_token: token, task: true, text: task_text, expire_date: task_date, team: task_team}, (result) => {
           //TODO: Add "addDeadline" module to the api modules and handle the result in here.
         });
       }

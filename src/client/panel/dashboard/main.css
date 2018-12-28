@@ -570,3 +570,22 @@ header {
 #ok-task {
   right: 10px;
 }
+
+#task-type {
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  background-color: #43015b;
+  color: #FFF;
+  direction: rtl;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+#task-type:hover {
+  outline: none;
+  cursor: pointer;
+}
