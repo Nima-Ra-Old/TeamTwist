@@ -73,7 +73,13 @@ $(document).ready(() => {
         let task_team = $("#task-type option:selected").val();
         $.post('/api/addDeadline', {user_token: token, task: true, text: task_text, expire_date: task_date, team: task_team}, (result) => {
           if (result.res == 'Added') {
-            alert("added");
+            alert("با موفقیت اضافه شد");
+            $("#ok-task").fadeOut('fast');
+            $("#cancel-task").fadeOut('fast');
+            $("#add-task-div").fadeOut('fast', () => {
+              $("#not_tasks").fadeIn('fast');
+            });
+            $("#add-task").fadeIn('fast');
           }
         });
       }
