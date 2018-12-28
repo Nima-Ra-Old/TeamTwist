@@ -24,6 +24,7 @@ const revokeToken = require('./api_modules/revokeToken.js');
 const deleteTodo = require('./api_modules/deleteTodo.js');
 const addTodo = require('./api_modules/addTodo.js');
 const getDeadlines = require('./api_modules/getDeadlines.js');
+const addDeadline = require('./api_modules/addDeadline.js');
 
 let apiLoader = {
   changePassword: function(db, app){
@@ -108,6 +109,10 @@ let apiLoader = {
   },
   getDeadlines: function (db, app){
     var method = getDeadlines.getDeadlines(db, app);
+    return method;
+  },
+  addDeadline: function (db, app){
+    var method = addDeadline.addDeadline(db, app);
     return method;
   }
 }
