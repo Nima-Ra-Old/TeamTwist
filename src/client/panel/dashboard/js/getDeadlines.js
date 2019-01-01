@@ -1,12 +1,21 @@
+
 function getCookie(name) {
   var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
   var result = regexp.exec(document.cookie);
   return (result === null) ? null : result[1];
 }
-
 var token = getCookie('token');
 
+function check_task (id) {
+  $(`#task-${id}`).fadeOut('fast', () => {
+    $(`#task-${id}`).remove();
+    $.post('/api/deleteDeadline', {user_token: token, id: id});
+  });
+}
+
 $(document).ready(() => {
+
+
   function date_error(){
     $("#task-date-picker").css('background-color', '#900e0e');
     let id = setInterval(() => {
@@ -35,7 +44,7 @@ $(document).ready(() => {
               <div id="tasks-span-div">
                 <span class="tasks-span">${text}</span>
               </div>
-              <button class="tasks-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="task-${id}-button">
+              <button onclick="check_task(${id})" class="tasks-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="task-${id}-button">
                 <i class="material-icons">check</i>
               </button>
             </li>
@@ -134,4 +143,5 @@ $(document).ready(() => {
     }
 
   });
+
 });

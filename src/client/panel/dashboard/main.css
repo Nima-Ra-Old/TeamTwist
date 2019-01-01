@@ -592,6 +592,8 @@ header {
 
 #tasks-ul {
   padding: 0;
+  float: right;
+  width: 100%;
 }
 
 .tasks-li {
@@ -636,4 +638,9 @@ header {
   height: 30px; /* image's height */
   color: #377642;
   vertical-align: middle;
+}
+
+#tasks-view {
+  float: right;
+  width: 100%;
 }
