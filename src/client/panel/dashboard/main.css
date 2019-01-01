@@ -589,3 +589,51 @@ header {
   outline: none;
   cursor: pointer;
 }
+
+#tasks-ul {
+  padding: 0;
+}
+
+.tasks-li {
+  margin: 0 auto;
+  padding: 0 5%;
+  float: right;
+  max-height: 30px;
+  width: 95%;
+  list-style: none;
+  margin: 5px 0;
+  direction: rtl;
+  color: #FFF;
+  text-align: right;
+  border-radius: 3px;
+  background: #43015b;
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  padding-left: 0;
+}
+
+#tasks-span-div {
+  height: 100%;
+  float: right;
+  max-height: 30px;
+}
+
+.tasks-span {
+  height: 30px; /* image's height */
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.tasks-button {
+  float: left;
+  padding: 0;
+  min-width: 50px;
+  max-height: 30px;
+}
+
+.tasks-button i {
+  height: 30px; /* image's height */
+  color: #377642;
+  vertical-align: middle;
+}
