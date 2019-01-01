@@ -15,18 +15,56 @@ $(document).ready(() => {
     }, 1000);
   }
 
-  $.post('/api/getDeadlines', {user_token: token}, (data) => {
+  function get_tasks() {
+    $.post('/api/getDeadlines', {user_token: token}, (data) => {
+      $(".tasks-li").remove();
+      if (data.res == "you do not have any deadlines.") {
+        $("#not_tasks").css('display','block');
+      } else if (data.deadlines && data.deadlines.length > 0) {
+        let tasks = data.deadlines;
+        for (let i = 0; i < tasks.length; i++) {
+          // each of variables below are related to one task
+          let task = tasks[i];
+          let text = task.text;
+          let passed = (task.passed == "true");
+          let id = task.id;
 
-    if (data.res == "you do not have any deadlines.") {
-      $("#not_tasks").css('display','block');
-    }
+          if (!passed) {
+            let element = `
+            <li class="tasks-li" id="task-${id}">
+              <div id="tasks-span-div">
+                <span class="tasks-span">${text}</span>
+              </div>
+              <button class="tasks-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="task-${id}-button">
+                <i class="material-icons">check</i>
+              </button>
+            </li>
+            `;
+            $("#tasks-ul").append(element);
+          } else {
+            continue;
+          }
+        }
+      }
+    });
+   return false;
+  }
 
-  });
+  get_tasks();
+
+  var tasks_status = $("#not_tasks").css('display') == 'none' ? true : false;
 
   $("#add-task").click(() => {
-    $("#not_tasks").fadeOut('fast', () => {
-      $("#add-task-div").fadeIn('fast');
-    });
+
+    if (!tasks_status) {
+      $("#not_tasks").fadeOut('fast', () => {
+        $("#add-task-div").fadeIn('fast');
+      });
+    } else {
+      $("#tasks-view").fadeOut('fast', () => {
+        $("#add-task-div").fadeIn('fast');
+      });
+    }
     $("#add-task").fadeOut('fast', () => {
       $("#ok-task").fadeIn('fast');
       $("#cancel-task").fadeIn('fast');
@@ -45,9 +83,12 @@ $(document).ready(() => {
   $("#cancel-task").click(() => {
     $("#ok-task").fadeOut('fast');
     $("#cancel-task").fadeOut('fast');
+
     $("#add-task-div").fadeOut('fast', () => {
-      $("#not_tasks").fadeIn('fast');
+      if (!tasks_status) $("#not_tasks").fadeIn('fast');
+      else $("#tasks-view").fadeIn('fast');
     });
+
     $("#add-task").fadeIn('fast');
   });
 
@@ -77,7 +118,8 @@ $(document).ready(() => {
             $("#ok-task").fadeOut('fast');
             $("#cancel-task").fadeOut('fast');
             $("#add-task-div").fadeOut('fast', () => {
-              $("#not_tasks").fadeIn('fast');
+              get_tasks();
+              $("#tasks-view").fadeIn('fast');
             });
             $("#add-task").fadeIn('fast');
           }
