@@ -1,3 +1,22 @@
+var date = new Date();
+let gy = date.getFullYear();
+let gm = date.getMonth() + 1;
+let gd = date.getDate();
+var today = gregorian_to_jalali(gy,gm,gd);
+today = `${today[0]}/${today[1]}/${today[2]}`;
+
+function check_tasks(id) {
+  $.post('/api/deleteDeadline', {user_token: token, id: id}, (data) => {
+    if (data.res == 'ok') {
+      $(`#task-${id}`).fadeOut('fast', () => {
+        $(`#task-${id}`).remove();
+        if ($(".tasks-li").length == 0) {
+          $("#not_tasks").fadeIn('fast');
+        }
+      });
+    }
+  });
+}
 function getCookie(name) {
   var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
   var result = regexp.exec(document.cookie);
@@ -15,6 +34,7 @@ $(document).ready(() => {
     }, 1000);
   }
 
+
   function get_tasks() {
     $.post('/api/getDeadlines', {user_token: token}, (data) => {
       $(".tasks-li").remove();
@@ -29,13 +49,13 @@ $(document).ready(() => {
           let passed = (task.passed == "true");
           let id = task.id;
 
-          if (!passed) {
+          if (!passed && task.deadline == today) {
             let element = `
             <li class="tasks-li" id="task-${id}">
               <div id="tasks-span-div">
                 <span class="tasks-span">${text}</span>
               </div>
-              <button class="tasks-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="task-${id}-button">
+              <button onClick="check_tasks(${id})" class="tasks-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="task-${id}-button">
                 <i class="material-icons">check</i>
               </button>
             </li>
@@ -56,7 +76,7 @@ $(document).ready(() => {
 
   $("#add-task").click(() => {
 
-    if (!tasks_status) {
+    if ($("#not_tasks").css('display') == 'block') {
       $("#not_tasks").fadeOut('fast', () => {
         $("#add-task-div").fadeIn('fast');
       });
@@ -71,12 +91,6 @@ $(document).ready(() => {
     });
   });
 
-  var date = new Date();
-  let gy = date.getFullYear();
-  let gm = date.getMonth() + 1;
-  let gd = date.getDate();
-  var today = gregorian_to_jalali(gy,gm,gd);
-  today = `${today[0]}/${today[1]}/${today[2]}`;
 
   $("#task-date-picker").attr("value", today);
 
@@ -85,7 +99,7 @@ $(document).ready(() => {
     $("#cancel-task").fadeOut('fast');
 
     $("#add-task-div").fadeOut('fast', () => {
-      if (!tasks_status) $("#not_tasks").fadeIn('fast');
+      if ($('.tasks-li').length == 0) $("#not_tasks").fadeIn('fast');
       else $("#tasks-view").fadeIn('fast');
     });
 
