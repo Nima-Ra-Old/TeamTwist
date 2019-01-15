@@ -46,14 +46,14 @@ $(document).ready(function() {
           password: password1,
           phone: phone
         }
-        $.post("http://127.0.0.1:8545/api/createUser", signup_data,  function(data) {
+        $.post(window.location.href.split('/signup')[0]+"/api/createUser", signup_data,  function(data) {
           if (data.reqStatus == 'done') {
             alert("ثبت نام شما با موفقیت انجام شد");
-            window.location.replace(`http://127.0.0.1:8545/verifyAccount`);
+            window.location.replace(`${window.location.href.split('/signup')[0]}/verifyAccount`);
           }
           else {
             alert("یک حساب دیگر دارد از ایمیل، نام کاربری و یا شماره تلفن شما استفاده می‌کند.")
-            window.location.replace("http://127.0.0.1:8545/signup");
+            window.location.replace(window.location.href);
           }
         });
       }
