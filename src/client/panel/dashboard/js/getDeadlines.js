@@ -1,11 +1,16 @@
-
 function check_it(id) {
   $.post('/api/deleteDeadline', {user_token: token, id: id}, (data) => {
     if (data.res == 'ok') {
-      $(`#task-${id}`).fadeOut('fast');
+      $(`#task-${id}`).fadeOut('fast', () => {
+        $(`#task-${id}`).remove();
+        if ($(".tasks-li").length == 0) {
+          $("#not_tasks").fadeIn('fast');
+        }
+      });
     }
   });
 }
+
 function getCookie(name) {
   var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
   var result = regexp.exec(document.cookie);
@@ -54,6 +59,12 @@ $(document).ready(() => {
           }
         }
       }
+      console.log($(".tasks-li").length);
+      if ($(".tasks-li").length == 0){
+        $("#not_tasks").fadeIn('fast');
+      } else {
+        $("#tasks-view").fadeIn('fast');
+      }
     });
    return false;
   }
@@ -90,8 +101,7 @@ $(document).ready(() => {
     $("#cancel-task").fadeOut('fast');
 
     $("#add-task-div").fadeOut('fast', () => {
-      if ($("#not_tasks").css('display') != 'none') $("#not_tasks").fadeIn('fast');
-      else $("#tasks-view").fadeIn('fast');
+      get_tasks();
     });
 
     $("#add-task").fadeIn('fast');
