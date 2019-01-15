@@ -10,13 +10,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/css/material.min.css" type="text/css">
   <script src="/js/material.min.js"></script>
-<<<<<<< HEAD
-=======
-  <!-- D3 Charts -->
-  <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
-  <script src="/js/radarChart.js"></script>
-  <link rel="stylesheet" href="/css/radarChart.css">
->>>>>>> user-panel
   <!-- jQuery -->
   <script src="/js/jquery.min.js"></script>
   <!-- Css libraries -->
@@ -110,68 +103,6 @@
 
   <div id="container">
 
-    <div class="boxes" id="deadline-manager">
-
-
-      <div id="calender">
-        <div class="box-headers" id="deadline-header">
-          <span>ددلاین های شما</span>
-        </div>
-      </div>
-      <div id="tasks">
-        <div id="tasks-display">
-          <span id="tasks-header">
-            تسک های امروز
-          </span>
-          <!-- If there is not any tasks to do -->
-          <div id="not_tasks">
-            <img src="/panel/dashboard/img/umbrella.png">
-            <br>
-            <span id="not_tasks_span">
-              استراحت کنید
-            </span>
-          </div>
-          <!-- End of not tasks statement -->
-
-          <!-- add task statements -->
-
-          <div id="add-task-div">
-            <textarea maxlength="80" class="task-input-class" id="task-input" placeholder="تسک را وارد کنید..."></textarea>
-
-            <input class="task-input-class" id="task-date-picker">
-
-            <br/>
-
-
-            <select id="task-type">
-              <option class="task-type-option" value="self">شخصی</option>
-            </select>
-          </div>
-
-          <!-- testing an example for showing tasks -->
-
-          <div id="tasks-view">
-            <ul id="tasks-ul"></ul>
-          </div>
-
-
-          <!-- End of add tasks statements -->
-
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" id="add-task">
-            <i class="material-icons">add</i>
-          </button>
-
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" id="ok-task">
-            <i class="material-icons">check</i>
-          </button>
-
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" id="cancel-task">
-            <i class="material-icons">clear</i>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <div class="boxes" id="todo-card">
 
       <div class="box-headers" id="todo-header">
@@ -218,7 +149,6 @@
 
         <div id="profile-photo">
           <img id="profile-img">
-          <i class="fa fa-camera" id="change-photo"></i>
         </div>
 
         <div id="account-right-contents">
@@ -232,57 +162,20 @@
           </span>
         </div>
 
-<<<<<<< HEAD
-=======
-      </div>
-
-      <div id="account-teams">
-        <span id="account-teams-span" class="persian">تیم ها</span>
-
-        <ul id="account-teams-ul"></ul>
-
-        <i class="fa fa-exclamation-triangle fa-sm" id="team-notfound">
-          <span>در هیچ تیمی شما
-            عضو نیستید!</span>
-        </i>
-
-
-        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="add-team">
-          تیم جدید<i class="material-icons add-todo-i" style="font-size: 20px; margin-top: 3px; color: #218601;">add</i> کنید!
-        </button>
-
->>>>>>> user-panel
 
       </div>
-    </div>
-
-    <div class="boxes" id="activities">
-
-      <div class="box-headers" id="account-header">
-        <span>فعالیت اکانت شما</span>
-      </div>
-
-
-      <div id="radar-chart"></div>
 
     </div>
-
 
   </div>
 
 
-<<<<<<< HEAD
-=======
-  <script src="/js/date-converter.js"></script>
-  <script src="/panel/dashboard/js/getDeadlines.js"></script>
->>>>>>> user-panel
+
   <script src="/panel/dashboard/js/right-menu.js"></script>
   <script src="/panel/dashboard/js/dropdown.js"></script>
   <script src="/panel/dashboard/js/logout.js"></script>
-  <script src="/panel/dashboard/js/changePhoto.js"></script>
   <script src="/panel/dashboard/js/todo.js"></script>
-  <script src="/panel/dashboard/js/getTeams.js"></script>
-  <script src="/panel/dashboard/js/activities.js"></script>
+
 
 </body>
 </html>

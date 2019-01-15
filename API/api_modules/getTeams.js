@@ -1,42 +1,25 @@
 function getTeams(db, app){
 	app.post("/api/getTeams", function(req, res, next){
-  		let token = req.body.user_token ? req.body.user_token : false;
-
-
-			if (token != false) {
-
-				db.query(`SELECT email FROM sessions WHERE token='${token}'`, (tokenErr, tokenRes, tokenFld) => {
-					if (tokenErr) console.log(tokenErr);
-
-					if (tokenRes[0]) {
-						let email = tokenRes[0].email;
-
-						db.query(`SELECT * FROM teams WHERE email='${email}'`, function(teamsErr, teamsRes, teamsFld){
-			     			if (teamsErr) throw teamsErr;
-
-			       		if (teamsRes[0]){
-									res.json(teamsRes);
-			          }
-			          else {
-									res.json({
-										res: "You have no team"
-									});
-			          }
-			    		});
-
-
-					} else {
-						res.json({
-							res: 'Fake token'
-						});
-					}
-				});
-
-			} else {
-				res.json({
-					res: 'parameters are missed'
-				})
-			}
+  		let user_id = req.query.user_id;
+  		if (user_id != undefined){
+			db.query("SELECT `name` FROM `teams` WHERE `user_id`='" + user_id + "'", function(error, results, fields){
+     			if (error) throw error;
+       		if (results.length == 0){
+            results = {
+              status: "You have no team"
+            }
+            res.json(results);
+          }
+          else {
+            res.json(results);
+          }
+    		});
+  		}
+  		else {
+			res.json({
+				error: "Parameters are missed"
+			});
+		}
   	});
 
   	app.get("/api/getTeams", function(req, res, next){

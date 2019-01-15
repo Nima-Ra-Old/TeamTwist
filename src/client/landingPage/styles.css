@@ -224,7 +224,7 @@ body, html {
 
 #team-header {
   font-family: yekan;
-  font-size: 35px;
+  font-size: 48px;
   color: #FFF;
   font-weight: bold;
   line-height: normal;
@@ -250,7 +250,7 @@ body, html {
 }
 
 .teams-img {
-  max-height: 75px;
+  max-height: 100px;
   max-width: 200px;
   filter: brightness(0) invert(1);
 }

@@ -23,9 +23,7 @@ const sendPicture = require('./api_modules/sendPicture.js');
 const revokeToken = require('./api_modules/revokeToken.js');
 const deleteTodo = require('./api_modules/deleteTodo.js');
 const addTodo = require('./api_modules/addTodo.js');
-const getDeadlines = require('./api_modules/getDeadlines.js');
-const addDeadline = require('./api_modules/addDeadline.js');
-const deleteDeadline = require('./api_modules/deleteDeadline.js');
+
 
 let apiLoader = {
   changePassword: function(db, app){
@@ -107,20 +105,8 @@ let apiLoader = {
   addTodo: function (db, app){
     var method = addTodo.addTodo(db, app);
     return method;
-  },
-  getDeadlines: function (db, app){
-    var method = getDeadlines.getDeadlines(db, app);
-    return method;
-  },
-  addDeadline: function (db, app){
-    var method = addDeadline.addDeadline(db, app);
-    return method;
-  },
-  deleteDeadline: function (db, app){
-    var method = deleteDeadline.deleteDeadline(db, app);
-    return method;
   }
 }
 
 // here modules are exported to use in the ../main.js file as api constant so they should use module.exports
-module.exports = apiLoader;
+module.exports = apiLoader
