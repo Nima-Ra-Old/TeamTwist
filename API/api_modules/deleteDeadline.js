@@ -31,7 +31,7 @@ function deleteDeadline(db, app) {
 
                  res.json({
                    res: "ok"
-                 }); 
+                 });
                });
              } else {
                // Deadline doesn't exist or user doesn't have enough access rights

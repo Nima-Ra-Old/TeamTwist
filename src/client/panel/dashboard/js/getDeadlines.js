@@ -1,3 +1,11 @@
+
+function check_it(id) {
+  $.post('/api/deleteDeadline', {user_token: token, id: id}, (data) => {
+    if (data.res == 'ok') {
+      $(`#task-${id}`).fadeOut('fast');
+    }
+  });
+}
 function getCookie(name) {
   var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
   var result = regexp.exec(document.cookie);
@@ -35,7 +43,7 @@ $(document).ready(() => {
               <div id="tasks-span-div">
                 <span class="tasks-span">${text}</span>
               </div>
-              <button class="tasks-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="task-${id}-button">
+              <button onclick=check_it(${id}) class="tasks-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="task-${id}-button">
                 <i class="material-icons">check</i>
               </button>
             </li>
@@ -51,12 +59,9 @@ $(document).ready(() => {
   }
 
   get_tasks();
-
-  var tasks_status = $("#not_tasks").css('display') == 'none' ? true : false;
-
   $("#add-task").click(() => {
 
-    if (!tasks_status) {
+    if ($("#not_tasks").css('display') != 'none') {
       $("#not_tasks").fadeOut('fast', () => {
         $("#add-task-div").fadeIn('fast');
       });
@@ -85,7 +90,7 @@ $(document).ready(() => {
     $("#cancel-task").fadeOut('fast');
 
     $("#add-task-div").fadeOut('fast', () => {
-      if (!tasks_status) $("#not_tasks").fadeIn('fast');
+      if ($("#not_tasks").css('display') != 'none') $("#not_tasks").fadeIn('fast');
       else $("#tasks-view").fadeIn('fast');
     });
 
