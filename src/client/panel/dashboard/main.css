@@ -454,7 +454,7 @@ header {
   background: #43015b;
   color: #FFF;
   margin-top: 10px;
-  display: inline-block;
+  display: block;
   float: right;
   width: 100%;
 }
@@ -642,21 +642,95 @@ header {
   height: 100%;
 }
 
-#deadlines-i {
-  background: red;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  float: left;
-}
-
-#deadlines-line {
+#deadlines-timeline {
   float: left;
   width: 100%;
+  height: 90%;
+  position: relative;
 }
 
 #deadlines-chart {
   float: left;
   width: 100%;
+  padding: 20px 0;
+  min-height: 50px;
+  bottom: 30px;
+  position: absolute;
+}
+
+#deadlines-line {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+}
+
+#deadlines-line i {
+  background: #20002b;
+  width: 100%;
+  height: 3px;
+  float: left;
+  margin-top: 22px;
+}
+
+#deadlines-ul {
+  padding: 0;
+  float: left;
+  width: 100%;
   display: flex;
+  position: absolute;
+  direction: rtl;
+  margin-bottom: 20px;
+}
+
+.deadlines-li {
+  float: left;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  direction: rtl;
+}
+
+.deadlines-circles-parent {
+  width: 100%;
+  float: left;
+  text-align: center;
+  display: flex;
+}
+
+.deadlines-circle {
+  float: left;
+  border: 2px solid #AD9400;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.deadlines-li-circle {
+  width: 25px;
+  height: 25px;
+  background: #AD9400;
+  color: #FFF;
+  border-radius: 50%;
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+}
+
+.deadlines-circle:hover {
+  cursor: pointer;
+}
+
+.deadlines-span {
+  direction: rtl;
+  color: #FFF;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+
+.deadlines-dates {
+  color: #FFF;
 }
