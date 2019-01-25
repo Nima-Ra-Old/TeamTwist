@@ -51,7 +51,7 @@ function createUser(db, app, smtpTransport){
       res.json({reqStatus: "missed parameters"});
     } else {
       let sql = `SELECT * FROM users
-      WHERE username='${user.username}' OR email='${user.phone}' OR phone='${user.phone}'
+      WHERE email='${user.email}' username='${user.username}' OR email='${user.phone}' OR phone='${user.phone}'
       `;
 
       db.query(sql, (checkErr, checkRes, checkFld) => {
