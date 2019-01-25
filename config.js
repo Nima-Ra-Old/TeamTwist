@@ -19,13 +19,25 @@ db.connect(function(err) {
 
 // Email config
 const emailConnection = nodemailer.createTransport({
-    service: "Gmail",
+    host: "mail.nima-ra.ir",
+    port: 465,
+    secure: true,
     auth: {
-        user: "TeamTwistCo",
-        pass: "teamtwist"
+        user: "teamtwist@nima-ra.ir",
+        pass: "PV7WBRYakXFjAF4"
+    },
+    tls: {
+      rejectUnauthorized: false
     }
 });
 
+emailConnection.verify(function(error, success) {
+  if (error) {
+    console.log(error.red);
+  } else {
+    console.log("Server is ready to take our messages".green);
+  }
+});
 
 module.exports = {
   db: db,
