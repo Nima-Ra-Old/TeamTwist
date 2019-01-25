@@ -669,7 +669,7 @@ box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
   width: 100%;
   padding: 20px 0;
   min-height: 50px;
-  bottom: 30px;
+  bottom: 5px;
   position: absolute;
 }
 
@@ -695,7 +695,6 @@ box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
   display: flex;
   position: absolute;
   direction: rtl;
-  margin-bottom: 20px;
 }
 
 .deadlines-li {
@@ -736,16 +735,32 @@ box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
   cursor: pointer;
 }
 
-.deadlines-span {
-  direction: rtl;
-  color: #FFF;
-  font-size: 16px;
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-
 .deadlines-dates {
   color: #FFF;
+}
+
+#deadline-view {
+  width: 100%;
+  float: right;
+  display: flex;
+  margin-top: 50px;
+}
+
+.deadlines-state {
+  margin: 0 auto;
+  float: right;
+  display: none;
+}
+
+.deadline-images {
+  float: right;
+}
+
+#vacation-span {
+  color: #FFF;
+  font-family: yekan;
+  direction: rtl;
+  float: left;
+  padding-top: 25%;
+  margin-right: 20px;
 }
