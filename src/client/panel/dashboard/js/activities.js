@@ -15,17 +15,17 @@ $(document).ready(() => {
                   {axis: "دنبال شوندگان", value: following},
                   {axis: "تیم ها", value: teams},
                   {axis: "پروژه ها", value: getProjects.projectsCount},
-                  {axis: "پیشنهاد های کاری", value: 2}
+                  {axis: "پیشنهاد های کاری", value: 0}
                 ]
               },
               {
                 className: 'ماه قبل',
                 axes: [
-                  {axis: "دنبال کنندگان", value: 6},
-                  {axis: "دنبال شوندگان", value: 7},
-                  {axis: "تیم ها", value: 10},
-                  {axis: "پروژه ها", value: 13},
-                  {axis: "پیشنهاد های کاری", value: 9}
+                  {axis: "دنبال کنندگان", value: 0},
+                  {axis: "دنبال شوندگان", value: 0},
+                  {axis: "تیم ها", value: 0},
+                  {axis: "پروژه ها", value: 0},
+                  {axis: "پیشنهاد های کاری", value: 0}
                 ]
               }
             ];
