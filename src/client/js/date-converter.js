@@ -18,7 +18,7 @@ function gregorian_to_jalali(gy,gm,gd){
  }
  gy2=(gm > 2)?(gy+1):gy;
  days=(365*gy) +(parseInt((gy2+3)/4)) -(parseInt((gy2+99)/100)) +(parseInt((gy2+399)/400)) -80 +gd +g_d_m[gm-1];
- jy+=33*(parseInt(days/12053)); 
+ jy+=33*(parseInt(days/12053));
  days%=12053;
  jy+=4*(parseInt(days/1461));
  days%=1461;
@@ -60,5 +60,5 @@ function jalali_to_gregorian(jy,jm,jd){
   if(gd <= v)break;
   gd-=v;
  }
- return [gy,gm,gd]; 
+ return [gy,gm,gd];
 }
