@@ -23,7 +23,7 @@ $(document).ready( () => {
         $("#account-teams-ul").append(element);
 
         let option = `
-        <option class="task-type-option" value="${data[i].id}">${data[i].name}</option>
+        <option class="task-type-option" value="${data[i].name}">${data[i].name}</option>
         `;
         $("#task-type").append(option);
       }
