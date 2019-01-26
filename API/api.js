@@ -26,6 +26,7 @@ const addTodo = require('./api_modules/addTodo.js');
 const getDeadlines = require('./api_modules/getDeadlines.js');
 const addDeadline = require('./api_modules/addDeadline.js');
 const deleteDeadline = require('./api_modules/deleteDeadline.js');
+const getSevenDaysDeadlines = require('./api_modules/getSevenDaysDeadlines.js');
 
 let apiLoader = {
   changePassword: function(db, app){
@@ -118,6 +119,10 @@ let apiLoader = {
   },
   deleteDeadline: function (db, app){
     var method = deleteDeadline.deleteDeadline(db, app);
+    return method;
+  },
+  getSevenDaysDeadlines: function (db, app){
+    var method = getSevenDaysDeadlines.getSevenDaysDeadlines(db, app);
     return method;
   }
 }

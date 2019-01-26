@@ -69,6 +69,8 @@ api.addTodo(db, app);
 api.getDeadlines(db, app);
 api.addDeadline(db, app);
 api.deleteDeadline(db, app);
+api.getSevenDaysDeadlines(db, app);
+
 // Panel
 panel.dashboard(db, app);
 
