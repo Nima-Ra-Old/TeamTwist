@@ -1,3 +1,10 @@
+var date = new Date();
+let gy = date.getFullYear();
+let gm = date.getMonth() + 1;
+let gd = date.getDate();
+var today = gregorian_to_jalali(gy,gm,gd);
+today = `${today[0]}/${today[1]}/${today[2]}`;
+
 function check_it(id) {
   $.post('/api/deleteDeadline', {user_token: token, id: id}, (data) => {
     if (data.res == 'ok') {
@@ -38,11 +45,12 @@ $(document).ready(() => {
         for (let i = 0; i < tasks.length; i++) {
           // each of variables below are related to one task
           let task = tasks[i];
+          let deadline_date = task.deadline;
           let text = task.text;
           let passed = (task.passed == "true");
           let id = task.id;
 
-          if (!passed) {
+          if (!passed && deadline_date == today) {
             let element = `
             <li class="tasks-li" id="task-${id}">
               <div id="tasks-span-div">
@@ -86,12 +94,6 @@ $(document).ready(() => {
     });
   });
 
-  var date = new Date();
-  let gy = date.getFullYear();
-  let gm = date.getMonth() + 1;
-  let gd = date.getDate();
-  var today = gregorian_to_jalali(gy,gm,gd);
-  today = `${today[0]}/${today[1]}/${today[2]}`;
 
   $("#task-date-picker").attr("value", today);
 
