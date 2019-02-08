@@ -754,6 +754,7 @@ box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
 
 .deadline-images {
   float: right;
+  height: 100px;
 }
 
 #vacation-span {
@@ -761,7 +762,7 @@ box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
   font-family: yekan;
   direction: rtl;
   float: left;
-  padding-top: 25%;
+  padding-top: 15%;
   margin-right: 20px;
 }
 
@@ -781,4 +782,24 @@ canvas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+.deadline-views-li {
+  color: #FFF;
+  direction: rtl;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+}
+
+.deadline-views-li img {
+  height: 40px;
+}
+
+#deadlines-view-ul {
+  display: flex;
+  width: 100%;
+  padding: 0;
 }

@@ -50,7 +50,7 @@ $(document).ready(() => {
           let passed = (task.passed == "true");
           let id = task.id;
 
-          if (!passed && deadline_date == today) {
+          if (!passed && deadline_date == today && task.task == true) {
             let element = `
             <li class="tasks-li" id="task-${id}">
               <div id="tasks-span-div">
