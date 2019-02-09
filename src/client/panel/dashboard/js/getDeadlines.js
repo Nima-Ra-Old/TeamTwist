@@ -16,6 +16,7 @@ $(document).ready(() => {
   }
 
   $.post('/api/getSevenDaysDeadlines', {user_token: token}, (data) => {
+    console.log(data);
 
     let weekdays = [[],[],[],[],[],[],[]];
 
@@ -31,30 +32,33 @@ $(document).ready(() => {
       var date = new Date();
       var today = date.getDay();
 
+      for (let i = 0; i < 7; i++) {
+        if (weekdays[(today + i) % 7].length == 0) {
+          $(`#deadline-circle-border-${1 + i}`).css('border-color', '#479c2c');
+          $(`#deadline-circle-body-${1 + i}`).css('background', '#479c2c');
+        }
+      }
+
       $("#deadline-1").hover(() => {
         $("#deadlines-view-ul").empty();
         //it's today
         var day_deadlines = weekdays[today % 7];
         if (day_deadlines.length == 0) {
-          $("#particles-js").fadeOut('fast');
           $('#free-deadlines').fadeIn('fast');
         } else {
           for (let i = 0; i < day_deadlines.length; i++){
             let deadline = `
               <li class="deadline-views-li">
-              <img src="/panel/dashboard/img/deadline.svg">
               ${day_deadlines[i].text}
               </li>
             `;
             $('#deadlines-view-ul').append(deadline);
           }
-          $("#particles-js").fadeOut('fast');
           $("#show_deadlines").fadeIn('fast');
         }
         $("#deadline-1").mouseleave(() => {
           $("#show_deadlines").fadeOut('fast');
           $('#free-deadlines').fadeOut('fast');
-          $("#particles-js").fadeIn('fast');
         });
       });
 
@@ -63,25 +67,21 @@ $(document).ready(() => {
         //it's today
         var day_deadlines = weekdays[(today + 1) % 7];
         if (day_deadlines.length == 0) {
-          $("#particles-js").fadeOut('fast');
           $('#free-deadlines').fadeIn('fast');
         } else {
           for (let i = 0; i < day_deadlines.length; i++){
             let deadline = `
               <li class="deadline-views-li">
-              <img src="/panel/dashboard/img/deadline.svg">
               ${day_deadlines[i].text}
               </li>
             `;
             $('#deadlines-view-ul').append(deadline);
           }
-          $("#particles-js").fadeOut('fast');
           $("#show_deadlines").fadeIn('fast');
         }
         $("#deadline-2").mouseleave(() => {
           $("#show_deadlines").fadeOut('fast');
           $('#free-deadlines').fadeOut('fast');
-          $("#particles-js").fadeIn('fast');
         });
       });
 
@@ -90,25 +90,21 @@ $(document).ready(() => {
         //it's today
         var day_deadlines = weekdays[(today + 2) % 7];
         if (day_deadlines.length == 0) {
-          $("#particles-js").fadeOut('fast');
           $('#free-deadlines').fadeIn('fast');
         } else {
           for (let i = 0; i < day_deadlines.length; i++){
             let deadline = `
               <li class="deadline-views-li">
-              <img src="/panel/dashboard/img/deadline.svg">
               ${day_deadlines[i].text}
               </li>
             `;
             $('#deadlines-view-ul').append(deadline);
           }
-          $("#particles-js").fadeOut('fast');
           $("#show_deadlines").fadeIn('fast');
         }
         $("#deadline-3").mouseleave(() => {
           $("#show_deadlines").fadeOut('fast');
           $('#free-deadlines').fadeOut('fast');
-          $("#particles-js").fadeIn('fast');
         });
       });
 
@@ -117,25 +113,21 @@ $(document).ready(() => {
         //it's today
         var day_deadlines = weekdays[(today + 3) % 7];
         if (day_deadlines.length == 0) {
-          $("#particles-js").fadeOut('fast');
           $('#free-deadlines').fadeIn('fast');
         } else {
           for (let i = 0; i < day_deadlines.length; i++){
             let deadline = `
               <li class="deadline-views-li">
-              <img src="/panel/dashboard/img/deadline.svg">
               ${day_deadlines[i].text}
               </li>
             `;
             $('#deadlines-view-ul').append(deadline);
           }
-          $("#particles-js").fadeOut('fast');
           $("#show_deadlines").fadeIn('fast');
         }
         $("#deadline-4").mouseleave(() => {
           $("#show_deadlines").fadeOut('fast');
           $('#free-deadlines').fadeOut('fast');
-          $("#particles-js").fadeIn('fast');
         });
       });
 
@@ -144,25 +136,21 @@ $(document).ready(() => {
         //it's today
         var day_deadlines = weekdays[(today + 4) % 7];
         if (day_deadlines.length == 0) {
-          $("#particles-js").fadeOut('fast');
           $('#free-deadlines').fadeIn('fast');
         } else {
           for (let i = 0; i < day_deadlines.length; i++){
             let deadline = `
               <li class="deadline-views-li">
-              <img src="/panel/dashboard/img/deadline.svg">
               ${day_deadlines[i].text}
               </li>
             `;
             $('#deadlines-view-ul').append(deadline);
           }
-          $("#particles-js").fadeOut('fast');
           $("#show_deadlines").fadeIn('fast');
         }
         $("#deadline-5").mouseleave(() => {
           $("#show_deadlines").fadeOut('fast');
           $('#free-deadlines').fadeOut('fast');
-          $("#particles-js").fadeIn('fast');
         });
       });
 
@@ -171,25 +159,21 @@ $(document).ready(() => {
         //it's today
         var day_deadlines = weekdays[(today + 5) % 7];
         if (day_deadlines.length == 0) {
-          $("#particles-js").fadeOut('fast');
           $('#free-deadlines').fadeIn('fast');
         } else {
           for (let i = 0; i < day_deadlines.length; i++){
             let deadline = `
               <li class="deadline-views-li">
-              <img src="/panel/dashboard/img/deadline.svg">
               ${day_deadlines[i].text}
               </li>
             `;
             $('#deadlines-view-ul').append(deadline);
           }
-          $("#particles-js").fadeOut('fast');
           $("#show_deadlines").fadeIn('fast');
         }
         $("#deadline-6").mouseleave(() => {
           $("#show_deadlines").fadeOut('fast');
           $('#free-deadlines').fadeOut('fast');
-          $("#particles-js").fadeIn('fast');
         });
       });
 
@@ -198,29 +182,28 @@ $(document).ready(() => {
         //it's today
         var day_deadlines = weekdays[(today + 6) % 7];
         if (day_deadlines.length == 0) {
-          $("#particles-js").fadeOut('fast');
           $('#free-deadlines').fadeIn('fast');
         } else {
           for (let i = 0; i < day_deadlines.length; i++){
             let deadline = `
               <li class="deadline-views-li">
-              <img src="/panel/dashboard/img/deadline.svg">
               ${day_deadlines[i].text}
               </li>
             `;
             $('#deadlines-view-ul').append(deadline);
           }
-          $("#particles-js").fadeOut('fast');
           $("#show_deadlines").fadeIn('fast');
         }
         $("#deadline-7").mouseleave(() => {
           $("#show_deadlines").fadeOut('fast');
           $('#free-deadlines').fadeOut('fast');
-          $("#particles-js").fadeIn('fast');
         });
       });
 
 
+    } else {
+      $(".deadlines-li-circle").css('background', '#479c2c');
+      $(".deadlines-circle").css('border-color', '#479c2c');
     }
   });
 });

@@ -714,7 +714,7 @@ box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
 
 .deadlines-circle {
   float: left;
-  border: 2px solid #AD9400;
+  border: 2px solid #bd002c;
   border-radius: 50%;
   padding: 5px;
   margin: 0 auto;
@@ -723,7 +723,7 @@ box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
 .deadlines-li-circle {
   width: 25px;
   height: 25px;
-  background: #AD9400;
+  background: #bd002c;
   color: #FFF;
   border-radius: 50%;
   -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
@@ -754,17 +754,9 @@ box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
 
 .deadline-images {
   float: right;
-  height: 100px;
+  height: 80px;
 }
 
-#vacation-span {
-  color: #FFF;
-  font-family: yekan;
-  direction: rtl;
-  float: left;
-  padding-top: 15%;
-  margin-right: 20px;
-}
 
 canvas {
   display: block;
@@ -788,18 +780,56 @@ canvas {
   color: #FFF;
   direction: rtl;
   font-size: 20px;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 100%;
   text-align: center;
   list-style: none;
-}
-
-.deadline-views-li img {
-  height: 40px;
+  background: #bd002c;
+  opacity: 0.9;
+  padding: 8px 30px;
+  border-radius: 3px;
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
 }
 
 #deadlines-view-ul {
   display: flex;
   width: 100%;
   padding: 0;
+  flex-direction: column;
+}
+
+#free-deadlines {
+  margin-top: 50px;
+  background: #479c2c;
+  padding: 5px 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  opacity: 0.9;
+}
+
+#deadlines-check-view {
+  width: 100%;
+  display: flex;
+}
+
+#deadlines-check-view i {
+  border: #FFF solid 3px;
+  float: left;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 40px;
+  color: #FFF;
+}
+
+#vacation-span {
+  color: #FFF;
+  font-family: yekan;
+  direction: rtl;
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px;
 }
