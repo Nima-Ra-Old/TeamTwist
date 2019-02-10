@@ -1,0 +1,10 @@
+#particles-js {
+  position: absolute;
+  padding: 5% 5%;
+  width: 70%;
+  height: 60%;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
