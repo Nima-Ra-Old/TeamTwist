@@ -1,10 +1,67 @@
+#container {
+  width: 100%;
+  display: flex;
+}
+
 #particles-js {
   position: absolute;
-  padding: 5% 5%;
-  width: 70%;
-  height: 60%;
+  padding: 2% 2%;
+  width: 96%;
+  height: 96%;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+.boxes {
+  background: #f3f3f3;
+  border-radius: 3px;
+  float: right;
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+}
+
+#teams-section {
+  background: #f3f3f3;
+  width: 80%;
+  margin: 20px auto;
+  opacity: 0.9;
+  padding: 0 20px;
+}
+
+#teams-header {
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid #ccc;
+}
+
+#teams-header span {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px auto;
+  float: right;
+}
+
+#teams-list {
+  padding: 10px 0;
+  float: right;
+  width: 100%;
+  direction: rtl;
+}
+
+#list-view {
+  border: 0;
+  color: #4caf50;
+  float: left;
+  background-color: Transparent;
+}
+
+#list-view:focus {
+  outline: none;
+}
+
+#list-view:hover {
+  cursor: pointer;
 }
