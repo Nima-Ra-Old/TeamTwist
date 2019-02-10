@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>داشبورد</title>
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/css/material.min.css" type="text/css">
+  <script src="/js/material.min.js"></script>
+  <!-- D3 Charts -->
+  <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+  <script src="/js/radarChart.js"></script>
+  <link rel="stylesheet" href="/css/radarChart.css">
+  <!-- jQuery -->
+  <script src="/js/jquery.min.js"></script>
+  <!-- Css libraries -->
+  <link rel="stylesheet" type="text/css" href="/css/hover-min.css">
+
+  <!-- Team Twist's libraries -->
+  <link rel="stylesheet" type="text/css" href="/panel/dashboard/main.css">
+  <script src="/panel/dashboard/js/getUser.js"></script>
+  <script src="/panel/dashboard/js/particles.min.js"></script>
+
+</head>
+<body>
+
+  <header>
+
+    <button id="menu-button" class="mdl-button hvr-icon-drop mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        <i class="menu-bars hvr-icon fa fa-bars"></i>
+    </button>
+
+    <button id="user-button" class="mdl-button hvr-icon-pop mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+      <img id="top-user-img">
+      <i class="fa fa-caret-down hvr-icon"></i>
+    </button>
+
+  </header>
+
+  <div id="dropdown-div">
+
+    <ul id="dropdown-ul">
+      <li class="dropdown-li">
+        <a id="user-settings" href="/settings">
+          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+            <i class="dropdown-i fa fa-user"></i>
+            <span class="dropdown-text">تنظیمات</span>
+          </button>
+        </a>
+      </li>
+
+      <li class="dropdown-li">
+        <a id="user-logout">
+          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+            <i class="dropdown-i fa fa-power-off"></i>
+            <span class="dropdown-text">خروج</span>
+          </button>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div id="right-menu">
+    <ul id="right-menu-ul">
+
+      <li class="right-menu-li">
+        <a class="right-menu-a" href="/panel">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-tachometer-alt"></i>
+            <span class="right-menu-text">داشبورد</span>
+          </button>
+        </a>
+      </li>
+
+      <li class="right-menu-li">
+        <a class="right-menu-a" href="/settings">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-cog"></i>
+            <span class="right-menu-text">تنظیمات</span>
+          </button>
+        </a>
+      </li>
+
+      <li class="right-menu-li">
+        <a class="right-menu-a" href="/teams">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-user-friends"></i>
+            <span class="right-menu-text">تیم ها</span>
+          </button>
+        </a>
+      </li>
+
+      <li class="right-menu-li">
+        <a class="right-menu-a" href="/projects">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-chart-pie"></i>
+            <span class="right-menu-text">پروژه ها</span>
+          </button>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div id="container">
+
+  </div>
+
+
+  <script src="/js/date-converter.js"></script>
+  <script src="/panel/dashboard/js/getDeadlines.js"></script>
+  <script src="/panel/dashboard/js/getTasks.js"></script>
+  <script src="/panel/dashboard/js/right-menu.js"></script>
+  <script src="/panel/dashboard/js/dropdown.js"></script>
+  <script src="/panel/dashboard/js/logout.js"></script>
+  <script src="/panel/dashboard/js/changePhoto.js"></script>
+  <script src="/panel/dashboard/js/todo.js"></script>
+  <script src="/panel/dashboard/js/getTeams.js"></script>
+  <script src="/panel/dashboard/js/activities.js"></script>
+  <script src="/panel/dashboard/js/particles.js"></script>
+
+</body>
+</html>
