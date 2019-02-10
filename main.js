@@ -7,7 +7,7 @@ const app = express();
 const {db, smtpTransport} = require("./config.js");
 const api = require("./API/api.js");
 const auth = require("./src/server/auth/auth.js");
-const panel = require("./src/server/panel/dashboard.js");
+const panel = require("./src/server/panel/launcher.js");
 const cookieParser = require('cookie-parser');
 
 
@@ -72,6 +72,6 @@ api.deleteDeadline(db, app);
 api.getSevenDaysDeadlines(db, app);
 
 // Panel
-panel.dashboard(db, app);
+panel.launcher(db, app);
 
 app.listen(8545);
