@@ -1,0 +1,353 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../../../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../../../fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../../../fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: yekan;
+  src: url('../../../fonts/Yekan.ttf');
+}
+
+* {
+  margin: 0;
+  font-family: yekan;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+body, html {
+  background: -webkit-linear-gradient(-135deg, #c850c0, #1437ea);
+  background: -o-linear-gradient(-135deg, #c850c0, #1437ea);
+  background: -moz-linear-gradient(-135deg, #c850c0, #1437ea);
+  background: linear-gradient(-135deg, #c850c0, #1437ea);
+  height: 100%;
+  display: inline-table;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  background: #f3f3f3;
+  -webkit-box-shadow: 0px 4px 25px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 25px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 25px -4px rgba(0,0,0,0.75);
+}
+
+#menu-button, #user-button {
+  float: right;
+  height: 100%;
+  width: 15px;
+  background: #ccc;
+  box-shadow: none;
+}
+
+#user-button {
+  float: left;
+  width: 6%;
+  min-width: 82px;
+  padding: 2px 10px;
+  background: #f3f3f3;
+  position: relative;
+}
+
+.menu-bars {
+  font-size: 18px;
+}
+
+#user-button i {
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#top-user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  float: right;
+  margin-left: 20px;
+}
+
+#dropdown-div {
+  background: #fff;
+  float: left;
+  display: none;
+  -webkit-box-shadow: 5px 5px 11px 0px rgba(50, 50, 50, 0.38);
+  -moz-box-shadow: 5px 5px 11px 0px rgba(50, 50, 50, 0.38);
+  box-shadow: 5px 5px 11px 0px rgba(50, 50, 50, 0.38);
+  border-radius: 0 0 50px 0;
+  position: absolute;
+  z-index: 999;
+
+}
+
+#dropdown-ul {
+  padding: 0;
+  min-width: 110px;
+}
+
+.dropdown-li {
+  list-style: none;
+}
+
+.dropdown-button {
+  width: 100%;
+  background: #f3f3f3;
+  line-height: normal;
+}
+
+.dropdown-button:hover {
+  background: #f3f3f3;
+}
+
+.dropdown-i {
+  float: right;
+  margin-left: 5px;
+}
+
+.dropdown-text {
+  font-family: yekan;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+#right-menu {
+  float: right;
+  height: 100%;
+  width: 15%;
+  min-width: 200px;
+  background: #f3f3f3;
+  display: none;
+  -webkit-box-shadow: -23px 22px 47px -9px rgba(0,0,0,0.44);
+  -moz-box-shadow: -23px 22px 47px -9px rgba(0,0,0,0.44);
+  box-shadow: -23px 22px 47px -9px rgba(0,0,0,0.44);
+  position: absolute;
+  z-index: 999;
+  right: 0;
+}
+
+#right-menu-ul {
+  padding: 0;
+}
+
+.right-menu-li {
+  list-style: none;
+  margin: 10px 0;
+  border-right: #0c9e61 5px solid;
+}
+
+.right-menu-text {
+  font-size: 18px;
+}
+
+.right-menu-i {
+  float: right;
+}
+
+#container {
+  width: 100%;
+}
+
+.box-headers {
+  background: #ccc;
+  border-radius: 3px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+
+#todo-header span {
+  font-family: 'Mukta', sans-serif;
+  font-size: 22px;
+}
+
+#todos {
+  background: #FFF;
+  border-radius: 3px;
+}
+
+#todos-ul {
+  padding: 10px;
+}
+
+.todos-li {
+  list-style: none;
+  width: 100%;
+}
+
+.todos-span {
+  float: right;
+  direction: rtl;
+}
+
+#add-todo {
+  width: 100%;
+  font-family: yekan;
+  direction: rtl;
+  font-size: 18px;
+  display: none;
+}
+
+#add-todo-i {
+  font-size: 12px;
+}
+
+#add-todo-form {
+  display: none;
+}
+
+#add-todo-input {
+  width: 96%;
+  border: 0;
+  padding: 5px 2%;
+  direction: rtl;
+  float: right;
+  background: #f3f3f3;
+  outline: none;
+}
+
+#add-todo-input::placeholder {
+  color: #000;
+}
+
+#add-todo-cancel , #add-todo-ok {
+  width: 50%;
+  display: inline-block;
+}
+
+#add-todo-cancel {
+  float: left;
+}
+
+#add-todo-always {
+  width: 100%;
+  background-color: #ccc;
+  font-family: yekan;
+  font-size: 20px;
+}
+
+.boxes {
+  background: #f3f3f3;
+  min-width: 300px;
+  max-height: 70%;
+  margin: 20px 10px;
+  display: inline-block;
+  border-radius: 3px;
+  float: right;
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+}
+
+#account-statistics {
+  background: #FFF;
+  float: left;
+  max-height: 250px;
+  width: 350px;
+}
+
+#account-contents {
+  padding: 5px;
+}
+
+#account-header span {
+  font-family: yekan;
+  font-size: 24px;
+}
+
+#profile-photo {
+  display: inline-flex;
+  position: relative;
+}
+
+#profile-photo:hover {
+  cursor: pointer;
+}
+
+#change-photo {
+  position: absolute;
+  font-size: 32px;
+  right: 35%;
+  top: 35%;
+  display: none;
+}
+
+#profile-img {
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.persian {
+  float: right;
+  font-family: yekan;
+  direction: rtl;
+}
+
+#account-username-content {
+  font-family: 'Open Sans';
+  font-size: 15px;
+  float: left;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+#account-right-contents {
+  float: right;
+}
+
+#account-username, #account-followers, #account-following {
+  display: block;
+  margin-top: 5px;
+  float: right;
+  font-size: 17px;
+}
+
+#account-teams {
+  width: 100%;
+  float: right;
+}
+
+#account-teams-span {
+  margin-right: 7px;
+  font-size: 22px;
+  width: 100%;
+}
+
+#account-teams-ul {
+  list-style: none;
+  padding: 0;
+  float: right;
+}
+
+.account-teams-li {
+  float: right;
+  width: 50px;
+  margin: 5px 15px;
+}
+
+.account-teams-img {
+  float: right;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+  vertical-align: middle;
+  border-radius: 3px;
+  background: #fff;
+}
