@@ -32,7 +32,6 @@ body, html {
   background: linear-gradient(-135deg, #c850c0, #1437ea);
   height: 100%;
   display: inline-table;
-  overflow: hidden;
 }
 
 header {
