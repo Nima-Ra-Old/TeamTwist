@@ -114,28 +114,50 @@
         <span>تیم های شما</span>
       </div>
 
-      <div id="teams-list">
-        <button id="list-view">
+      <div id="teams-view">
+        <button class="list-options list-view" id="list-view-details">
           <i class="fas fa-th-list"></i>
         </button>
 
-        <button id="list-view">
+        <button class="list-options list-view" id="list-view-large">
           <i class="fas fa-th-large"></i>
         </button>
 
-        <ul>
-          <li>Hey there</li>
+        <button class="list-options add-team" id="list-view-large">
+          <i class="fas fa-plus-circle"></i>
+        </button>
+
+        <span id="team-notfound">
+          شما در هیچ تیمی عضو نیستید.
+        </span>
+
+        <div id="add-team-box">
+          <div id="add-team-name-div" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="add-team-name">
+            <label class="mdl-textfield__label" id="add-team-lable">اسم تیم...</label>
+          </div>
           <br>
-          <li>Hey there</li>
-        </ul>
+          <br>
+          <br>
+          <br>
+          <div id="add-team-img">
+            <div class="mdl-button mdl-js-button mdl-button--raised" id="drop">
+              <label class="fas fa-images" for="team-profile-upload"></label>
+              <input data-type="png,jpg" id="team-profile-upload" type="file" name="upl" data-crop="true">
+            </div>
+          </div>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">ثبت</button>
+        </div>
       </div>
 
       </div>
     </div>
 
-  </div>
-
+  <!-- Sahred folder files -->
+  <script src="/panel/shared-files/js/droparea.js"></script>
+  <!-- Special scripts -->
   <script src="/panel/teams/js/particles.js"></script>
-
+  <script src="/panel/teams/js/getTeams.js"></script>
+  <script src="/panel/teams/js/image-uploader.js"></script>
 </body>
 </html>

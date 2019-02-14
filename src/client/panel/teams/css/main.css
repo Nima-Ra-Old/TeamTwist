@@ -44,24 +44,98 @@
   float: right;
 }
 
-#teams-list {
+#teams-view {
   padding: 10px 0;
   float: right;
   width: 100%;
   direction: rtl;
 }
 
-#list-view {
+.list-options {
   border: 0;
   color: #4caf50;
   float: left;
   background-color: Transparent;
 }
 
-#list-view:focus {
+.list-options:focus {
   outline: none;
 }
 
-#list-view:hover {
+.list-options:hover {
   cursor: pointer;
+}
+
+#team-notfound {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+#add-team-box {
+  direction: rtl;
+}
+
+#add-team-box span {
+  float: right;
+  margin-left: 20px;
+  line-height: 100%;
+}
+
+#add-team-name-div {
+  float: right;
+  max-width: 200px;
+}
+
+#add-team-name {
+  direction: rtl;
+  text-align: right;
+  font-size: 18px;
+  font-family: yekan;
+}
+
+#add-team-lable {
+  float: right;
+  text-align: right;
+  font-size: 18px;
+}
+
+#add-team-img {
+  float: right;
+}
+
+#add-team-img span {
+  margin-top: 20px;
+}
+
+#drop {
+  background: #4caf50;
+  float: right;
+  width: 15px;
+  padding: 0;
+}
+
+#drop:hover {
+  cursor: pointer;
+}
+
+#drop label {
+  vertical-align: middle;
+  font-size: 18px;
+  color: #FFF;
+}
+
+#drop label:hover {
+  cursor: pointer;
+}
+
+#team-profile-upload {
+  visibility: hidden;
+}
+
+#add-team-box button {
+  font-family: yekan;
+  font-size: 18px;
+  background: #4caf50;
+  margin-right: 20px;
 }
