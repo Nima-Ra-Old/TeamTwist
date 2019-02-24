@@ -74,6 +74,11 @@
 
 #add-team-box {
   direction: rtl;
+  float: right;
+}
+
+#add-team-box form {
+  float: right;
 }
 
 #add-team-box span {
@@ -108,34 +113,19 @@
   margin-top: 20px;
 }
 
-#drop {
-  background: #4caf50;
-  float: right;
-  width: 15px;
-  padding: 0;
-}
-
-#drop:hover {
-  cursor: pointer;
-}
-
-#drop label {
-  vertical-align: middle;
-  font-size: 18px;
-  color: #FFF;
-}
-
-#drop label:hover {
-  cursor: pointer;
-}
-
-#team-profile-upload {
-  visibility: hidden;
-}
-
-#add-team-box button {
+#add-submit {
   font-family: yekan;
   font-size: 18px;
   background: #4caf50;
   margin-right: 20px;
+}
+
+#add-team-img i {
+  width: 100px;
+  position: relative;
+}
+
+#add-team-image {
+  width: 100px;
+  position: absolute;
 }

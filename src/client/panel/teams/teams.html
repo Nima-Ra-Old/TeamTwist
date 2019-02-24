@@ -132,32 +132,28 @@
         </span>
 
         <div id="add-team-box">
-          <div id="add-team-name-div" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="add-team-name">
-            <label class="mdl-textfield__label" id="add-team-lable">اسم تیم...</label>
-          </div>
-          <br>
-          <br>
-          <br>
-          <br>
-          <div id="add-team-img">
-            <div class="mdl-button mdl-js-button mdl-button--raised" id="drop">
-              <label class="fas fa-images" for="team-profile-upload"></label>
-              <input data-type="png,jpg" id="team-profile-upload" type="file" name="upl" data-crop="true">
+          <form id="add-team-form" method="post" enctype="multipart/form-data" action="/addTeam">
+            <div id="add-team-name-div" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" id="add-team-lable">اسم تیم...</label>
+              <input id="add-team-name" class="mdl-textfield__input" type="text" name="teamName">
             </div>
-          </div>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">ثبت</button>
-        </div>
+
+            <div id="add-team-img">
+              <i class="far fa-images"></i>
+              <input id="add-team-image" type="file" name="upl">
+            </div>
+            <input id="add-submit" type="submit" value="ثبت" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+          </form>
       </div>
 
       </div>
     </div>
 
   <!-- Sahred folder files -->
-  <script src="/panel/shared-files/js/droparea.js"></script>
+  <script src="/panel/shared-files/js/logout.js"></script>
+
   <!-- Special scripts -->
   <script src="/panel/teams/js/particles.js"></script>
   <script src="/panel/teams/js/getTeams.js"></script>
-  <script src="/panel/teams/js/image-uploader.js"></script>
 </body>
 </html>
