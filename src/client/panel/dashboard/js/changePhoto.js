@@ -11,7 +11,7 @@ $(document).ready(() => {
   });
 
   $("#profile-photo").click(() => {
-    window.location=window.location.href + 'settings';
+    window.location= '/' + 'settings';
   });
 
 });
