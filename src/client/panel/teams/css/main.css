@@ -164,3 +164,7 @@
   float: right;
   padding: 18px 0;
 }
+
+#teams-list {
+  display: none;
+}
