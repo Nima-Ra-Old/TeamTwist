@@ -40,7 +40,7 @@ function addTeam(db, app) {
           db.query(addSQL, (addErr, addRes, addFld) => {
             if (addErr) console.log(addErr);
 
-            fs.rename(tempPath, 'documents/team-images/' + randomName, err => {
+            fs.rename(tempPath, 'documents/team-images/' + randomName + '.png', err => {
               if (err) return handleError(err, res);
               res.json({
                 res: "Team added successfully"
