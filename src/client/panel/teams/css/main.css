@@ -75,6 +75,7 @@
 #add-team-box {
   direction: rtl;
   float: right;
+  display: none;
 }
 
 #add-team-box form {
@@ -107,6 +108,8 @@
 
 #add-team-img {
   float: right;
+  margin-right: 20px;
+  padding: 18px 0;
 }
 
 #add-team-img span {
@@ -114,6 +117,7 @@
 }
 
 #add-submit {
+  height: 30px;
   font-family: yekan;
   font-size: 18px;
   background: #4caf50;
@@ -122,10 +126,41 @@
 
 #add-team-img i {
   width: 100px;
-  position: relative;
 }
 
 #add-team-image {
-  width: 100px;
+  z-index: 999;
+  line-height: 0;
+  font-size: 50px;
   position: absolute;
+  opacity: 0;
+  filter: alpha(opacity = 0);
+  -ms-filter: "alpha(opacity=0)";
+  cursor: pointer;
+  _cursor: hand;
+  margin: 0;
+  padding:0;
+  left:0;
+  width: 100%;
+  top: 0;
+}
+
+#add-team-image-lable {
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  text-align:center;
+  background-color:#83b81a;
+  color:#fff;display:block;
+  font-size:18px;
+  line-height:30px;
+  float:left;
+  width: 100%;
+  padding: 0;
+  height: 30px;
+}
+
+#add-submit-parent {
+  float: right;
+  padding: 18px 0;
 }

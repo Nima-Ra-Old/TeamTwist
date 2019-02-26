@@ -123,8 +123,8 @@
           <i class="fas fa-th-large"></i>
         </button>
 
-        <button class="list-options add-team" id="list-view-large">
-          <i class="fas fa-plus-circle"></i>
+        <button class="list-options" id="add-team-button">
+          <i class="fas fa-plus"></i>
         </button>
 
         <span id="team-notfound">
@@ -139,10 +139,12 @@
             </div>
 
             <div id="add-team-img">
-              <i class="far fa-images"></i>
-              <input id="add-team-image" type="file" name="upl">
+              <lable class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" for="add-team-image" id="add-team-image-lable">
+                <i class="far fa-images"></i>
+                <input id="add-team-image" type="file" name="upl">
+              </lable>
             </div>
-            <input id="add-submit" type="submit" value="ثبت" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+            <i id="add-submit-parent"><input id="add-submit" type="submit" value="ثبت" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"></i>
           </form>
       </div>
 
@@ -155,5 +157,6 @@
   <!-- Special scripts -->
   <script src="/panel/teams/js/particles.js"></script>
   <script src="/panel/teams/js/getTeams.js"></script>
+  <script src="/panel/teams/js/manager.js"></script>
 </body>
 </html>
