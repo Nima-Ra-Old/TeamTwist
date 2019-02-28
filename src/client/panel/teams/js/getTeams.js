@@ -13,6 +13,7 @@ function getTeams(){
     if (data.length == 0) {
       $("#team-notfound").css('display', 'block');
     } else {
+      $(".teams-list-li").remove();
       for (let i = 0; i < data.length; i++) {
         var element = `
         <li class="teams-list-li" onClick="openTeam(${i})">
@@ -21,7 +22,7 @@ function getTeams(){
         </li>`
         $("#teams-list-ul").append(element);
       }
-      $("#teams-list").css('display', 'block');
+      $("#teams-list").fadeIn('fast');
     }
   });
 }
