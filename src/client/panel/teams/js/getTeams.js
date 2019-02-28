@@ -16,7 +16,7 @@ function getTeams(){
       $(".teams-list-li").remove();
       for (let i = 0; i < data.length; i++) {
         var element = `
-        <li class="teams-list-li" onClick="openTeam(${i})">
+        <li class="teams-list-li" onClick="openTeam(${data[i].id})">
         <img src="/api/photos?teamPic=${data[i].picture}">
         <span class="teams-list-name">${data[i].name}</span>
         </li>`
