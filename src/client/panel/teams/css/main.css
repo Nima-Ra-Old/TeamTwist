@@ -167,4 +167,40 @@
 
 #teams-list {
   display: none;
+  float: right;
+  width: 100%;
+}
+
+#teams-list-ul {
+  float: right;
+  width: 100%;
+  padding: 0;
+}
+
+.teams-list-li {
+  float: right;
+  width: 150px;
+  list-style: none;
+  background: #c0c0c0;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.teams-list-li img {
+  float: left;
+  width: 100%;
+}
+
+.teams-list-name {
+  text-align: center;
+  width: 100%;
+  float: right;
+  font-family: Poppins-regular;
+  font-size: 16px;
+  background: #ababab;
+  border-radius: 0 0 4px 4px;
+}
+
+.teams-list-li:hover {
+  cursor: pointer;
 }
