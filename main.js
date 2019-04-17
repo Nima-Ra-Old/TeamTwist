@@ -71,6 +71,8 @@ api.addDeadline(db, app);
 api.deleteDeadline(db, app);
 api.getSevenDaysDeadlines(db, app);
 api.addTeam(db, app);
+api.deleteTeam(db, app);
+
 // Panel
 panel.launcher(db, app);
 

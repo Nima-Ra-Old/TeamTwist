@@ -25,7 +25,7 @@ const emailConnection = nodemailer.createTransport({
     auth: {
         user: "teamtwist@nima-ra.ir",
         pass: "PV7WBRYakXFjAF4"
-    },
+    },  
     tls: {
       rejectUnauthorized: false
     }

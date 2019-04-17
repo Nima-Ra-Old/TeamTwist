@@ -28,6 +28,7 @@ const addDeadline = require('./api_modules/addDeadline.js');
 const deleteDeadline = require('./api_modules/deleteDeadline.js');
 const getSevenDaysDeadlines = require('./api_modules/getSevenDaysDeadlines.js');
 const addTeam = require('./api_modules/addTeam.js');
+const deleteTeam = require('./api_modules/deleteTeam.js');
 
 let apiLoader = {
   changePassword: function(db, app){
@@ -128,6 +129,10 @@ let apiLoader = {
   },
   addTeam: function (db, app){
     var method = addTeam.addTeam(db, app);
+    return method;
+  },
+  deleteTeam: function (db, app){
+    var method = deleteTeam.deleteTeam(db, app);
     return method;
   }
 }
