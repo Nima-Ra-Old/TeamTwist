@@ -1,0 +1,19 @@
+.card_title {
+  font-size: 72px;
+  margin-bottom: 20%;
+  max-width: 80%;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.button {
+  margin: 0 auto;
+  width: 500px;
+  height: 150px;
+  font-size: 45px !important;
+  line-height: 1.5 !important;
+}
+
+#responsive {
+  display: flex;
+}

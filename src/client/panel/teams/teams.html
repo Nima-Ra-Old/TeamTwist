@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>مدیریت تیم ها</title>
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/css/material.min.css" type="text/css">
+  <script src="/js/material.min.js"></script>
+  <!-- jQuery -->
+  <script src="/js/jquery.min.js"></script>
+  <!-- Css libraries -->
+  <link rel="stylesheet" type="text/css" href="/css/hover-min.css">
+
+  <!-- Team Twist's libraries -->
+  <link rel="stylesheet" type="text/css" href="/panel/shared-files/css/default.css">
+  <link rel="stylesheet" type="text/css" href="/panel/teams/css/main.css">
+
+</head>
+<body>
+
+  <header>
+
+    <button id="menu-button" class="mdl-button hvr-icon-drop mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        <i class="menu-bars hvr-icon fa fa-bars"></i>
+    </button>
+
+    <button id="user-button" class="mdl-button hvr-icon-pop mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+      <img id="top-user-img">
+      <i class="fa fa-caret-down hvr-icon"></i>
+    </button>
+
+  </header>
+
+  <div id="dropdown-div">
+
+    <ul id="dropdown-ul">
+      <li class="dropdown-li">
+        <a id="user-settings" href="/settings">
+          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+            <i class="dropdown-i fa fa-user"></i>
+            <span class="dropdown-text">تنظیمات</span>
+          </button>
+        </a>
+      </li>
+
+      <li class="dropdown-li">
+        <a id="user-logout">
+          <button class="dropdown-button mdl-button mdl-js-button mdl-js-ripple-effect">
+            <i class="dropdown-i fa fa-power-off"></i>
+            <span class="dropdown-text">خروج</span>
+          </button>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div id="right-menu">
+    <ul id="right-menu-ul">
+
+      <li class="right-menu-li">
+        <a class="right-menu-a" href="/panel">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-tachometer-alt"></i>
+            <span class="right-menu-text">داشبورد</span>
+          </button>
+        </a>
+      </li>
+
+      <li class="right-menu-li">
+        <a class="right-menu-a" href="/settings">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-cog"></i>
+            <span class="right-menu-text">تنظیمات</span>
+          </button>
+        </a>
+      </li>
+
+      <li class="right-menu-li">
+        <a class="right-menu-a" href="/teams">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-user-friends"></i>
+            <span class="right-menu-text">تیم ها</span>
+          </button>
+        </a>
+      </li>
+
+      <li class="right-menu-li">
+        <a class="right-menu-a" href="/projects">
+          <button class="dropdown-button mdl-button hvr-icon-spin mdl-js-button mdl-js-ripple-effect">
+            <i class="right-menu-i hvr-icon fa fa-chart-pie"></i>
+            <span class="right-menu-text">پروژه ها</span>
+          </button>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="container">
+    <div id="particles-js"></div>
+
+
+    <div id="teams-section" class="boxes">
+      <div id="teams-header">
+        <span>تیم های شما</span>
+      </div>
+
+      <div id="teams-view">
+        <button class="list-options" id="add-team-button">
+          <i class="fas fa-plus"></i>
+        </button>
+        <button class="list-options" id="delete-team-button">
+          <i id="enableDeleting" class="fas fa-trash"></i>
+        </button>
+
+
+        <span id="team-notfound">
+          شما در هیچ تیمی عضو نیستید.
+        </span>
+
+        <div id="teams-list">
+          <ul id="teams-list-ul"></ul>
+        </div>
+
+        <div id="deleteTeamList">
+          <ul id="deleteTeamUL"></ul>
+        </div>
+
+        <div id="add-team-box">
+          <form id="add-team-form" method="post" enctype="multipart/form-data" action="/addTeam">
+            <div id="add-team-name-div" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" id="add-team-lable">اسم تیم...</label>
+              <input id="add-team-name" class="mdl-textfield__input" type="text" name="teamName">
+            </div>
+
+            <div id="add-team-img">
+              <lable class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" for="add-team-image" id="add-team-image-lable">
+                <i class="far fa-images"></i>
+                <input id="add-team-image" type="file" name="upl">
+              </lable>
+            </div>
+            <i id="add-submit-parent"><input id="add-submit" type="submit" value="ثبت" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"></i>
+          </form>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Sahred folder files -->
+  <script src="/panel/shared-files/js/logout.js"></script>
+  <script src="/panel/shared-files/js/getUser.js"></script>
+  <script src="/panel/shared-files/js/particles.min.js"></script>
+  <script src="/panel/shared-files/js/dropdown.js"></script>
+  <script src="/panel/shared-files/js/right-menu.js"></script>
+  <!-- Special scripts -->
+  <script src="/panel/teams/js/particles.js"></script>
+  <script src="/panel/teams/js/getTeams.js"></script>
+  <script src="/panel/teams/js/deleteTeams.js"></script>
+  <script src="/panel/teams/js/addTeam.js"></script>
+  <script src="/panel/teams/js/manager.js"></script>
+</body>
+</html>

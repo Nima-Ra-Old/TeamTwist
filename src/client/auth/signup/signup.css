@@ -1,0 +1,149 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../../fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../../fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: yekan;
+  src: url('../../fonts/Yekan.ttf');
+}
+
+* {
+  margin: 0;
+}
+
+body, html {
+  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  margin: 20px;
+  display: flex;
+  height: 90%;
+}
+
+.login {
+  max-width: 960px;
+  min-width: 850px;
+  background: #fff;
+  border-radius: 55px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+#login-pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  float: left;
+  max-width: 50%;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: right;
+  width: 50%;
+}
+
+#login-form h1 {
+  font-family: yekan;
+  color: #333333;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  float: right;
+  display: block;
+}
+
+#login-form input {
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  padding: 0px 20px;
+}
+
+#login-form input::placeholder {
+  direction: rtl;
+  margin: 0 auto;
+  font-family: yekan;
+}
+
+#submit {
+  background: #57b846;
+  font-family: yekan;
+  font-weight: bold;
+  font-size: 22px;
+  color: #fff;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0px 20px;
+  border: none;
+  outline: none;
+  transition: background 0.5s;
+  width: 100%;
+}
+
+#submit:hover {
+  background: #333;
+  cursor: pointer;
+}
+
+#login-contents {
+  margin: 0 auto;
+}
+
+#con {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#con span {
+  float: right;
+  direction: rtl;
+  color: #333;
+  font-family: yekan;
+  font-size: 18px;
+}
+
+#con span a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
