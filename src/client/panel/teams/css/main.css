@@ -29,6 +29,7 @@
   margin: 20px auto;
   opacity: 0.9;
   padding: 0 20px;
+  position: relative;
 }
 
 #teams-header {
@@ -218,4 +219,89 @@
 
 .teams-list-li:hover {
   cursor: pointer;
+}
+
+#deleteTeamList {
+  width: 100%;
+  position: absolute;
+  float: right;
+  display: flex;
+}
+
+#deleteTeamList ul {
+  margin: 0 auto;
+  width: 350px;
+  border-radius: 3px;
+  border: solid 1px #bdbdbd;
+  background: #fefefe;
+  float: right;
+  padding: 0;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  filter: brightness(100%);
+  display: none;
+}
+
+.deleteTeamItem {
+  float: right;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: solid 1px #bdbdbd;
+}
+
+.deleteTeamItemInfo {
+  width: 75%;
+  float: right;
+  margin: 5px 10px 5px 0;
+}
+
+.deleteTeamItem img {
+  max-width: 100%;
+  height: 60px;
+  float: right;
+}
+
+.deleteTeamItem span {
+  font-family: Poppins-bold;
+  font-size: 12px;
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.deleteTeamParent {
+  position: relative;
+  float: left;
+  width: 25%;
+}
+
+.deleteTeam {
+  float: left;
+  background: #fefefe;
+  border: none;
+  padding: 2px;
+  padding-bottom: 0;
+  border-radius: 3px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.deleteTeam:focus {
+  outline: none;
+}
+
+.deleteTeam:hover {
+  cursor: pointer;
+}
+
+.deleteTeam i {
+  color: #499e5d;
 }
