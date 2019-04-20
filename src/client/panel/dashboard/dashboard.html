@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/css/material.min.css" type="text/css">
   <script src="/js/material.min.js"></script>
+  <!-- D3 Charts -->
+  <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+  <script src="/js/radarChart.js"></script>
+  <link rel="stylesheet" href="/css/radarChart.css">
   <!-- jQuery -->
   <script src="/js/jquery.min.js"></script>
   <!-- Css libraries -->
@@ -106,8 +110,6 @@
 
   <div id="container">
 
-<<<<<<< HEAD
-=======
     <div class="boxes" id="deadline-manager">
 
 
@@ -278,7 +280,6 @@
       </div>
     </div>
 
->>>>>>> user-panel
     <div class="boxes" id="todo-card">
 
       <div class="box-headers" id="todo-header">
@@ -325,21 +326,13 @@
 
         <div id="profile-photo">
           <img id="profile-img">
+          <i class="fa fa-camera" id="change-photo"></i>
         </div>
 
         <div id="account-right-contents">
           <span class="persian" id="account-username">
             نام کاربری: <span id="account-username-content"></span>
           </span>
-<<<<<<< HEAD
-
-          <span class="persian" id="account-teams">
-            دنبال کنندگان:
-            <span id="account-followers-count"></span>
-          </span>
-        </div>
-
-=======
           <br>
           <span class="persian" id="account-followers">
             دنبال کنندگان:
@@ -374,23 +367,20 @@
     </div>
 
     <div class="boxes" id="activities">
->>>>>>> user-panel
 
+      <div class="box-headers" id="account-header">
+        <span>فعالیت اکانت شما</span>
       </div>
 
+
+      <div id="radar-chart"></div>
+
     </div>
+
 
   </div>
 
 
-<<<<<<< HEAD
-
-  <script src="/panel/dashboard/js/right-menu.js"></script>
-  <script src="/panel/dashboard/js/dropdown.js"></script>
-  <script src="/panel/dashboard/js/logout.js"></script>
-  <script src="/panel/dashboard/js/todo.js"></script>
-
-=======
   <script src="/js/date-converter.js"></script>
   <script src="/panel/dashboard/js/getDeadlines.js"></script>
   <script src="/panel/dashboard/js/getTasks.js"></script>
@@ -402,7 +392,6 @@
   <script src="/panel/dashboard/js/getTeams.js"></script>
   <script src="/panel/dashboard/js/activities.js"></script>
   <script src="/panel/dashboard/js/particles.js"></script>
->>>>>>> user-panel
 
 </body>
 </html>

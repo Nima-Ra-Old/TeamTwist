@@ -31,11 +31,7 @@ body, html {
   background: -moz-linear-gradient(-135deg, #c850c0, #1437ea);
   background: linear-gradient(-135deg, #c850c0, #1437ea);
   height: 100%;
-<<<<<<< HEAD
-  overflow: hidden;
-=======
   display: inline-table;
->>>>>>> user-panel
 }
 
 header {
@@ -258,12 +254,8 @@ header {
 #account-statistics {
   background: #FFF;
   float: left;
-<<<<<<< HEAD
-  min-height: 70%;
-=======
   max-height: 250px;
   width: 350px;
->>>>>>> user-panel
 }
 
 #account-contents {
@@ -302,8 +294,6 @@ header {
 
 #account-right-contents {
   float: right;
-<<<<<<< HEAD
-=======
 }
 
 #account-username, #account-followers, #account-following {

@@ -66,16 +66,12 @@ api.charge(db, app);
 api.sendPicture(app);
 api.deleteTodo(db, app);
 api.addTodo(db, app);
-<<<<<<< HEAD
-
-=======
 api.getDeadlines(db, app);
 api.addDeadline(db, app);
 api.deleteDeadline(db, app);
 api.getSevenDaysDeadlines(db, app);
 api.addTeam(db, app);
 api.deleteTeam(db, app);
->>>>>>> user-panel
 
 // Panel
 panel.launcher(db, app);
