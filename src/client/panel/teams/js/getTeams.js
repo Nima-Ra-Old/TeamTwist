@@ -27,7 +27,7 @@ function deleteTeam(id) {
 }
 
 function enableDeleting() {
-  $(".teams-list-li").css()
+  
 }
 
 function getTeams(){
