@@ -16,8 +16,11 @@
   <link rel="stylesheet" type="text/css" href="/css/hover-min.css">
 
   <!-- Team Twist's libraries -->
+  <link rel="stylesheet" type="text/css" href="/panel/shared-files/css/default.css">
   <link rel="stylesheet" type="text/css" href="/panel/dashboard/main.css">
-  <script src="/panel/dashboard/js/getUser.js"></script>
+  <script src="/panel/shared-files/js/getUser.js"></script>
+  <script src="/panel/shared-files/js/particles.min.js"></script>
+
 </head>
 <body>
 
@@ -103,6 +106,179 @@
 
   <div id="container">
 
+<<<<<<< HEAD
+=======
+    <div class="boxes" id="deadline-manager">
+
+
+      <div id="calender">
+        <div id="particles-js"></div>
+        <div class="box-headers" id="deadline-header">
+          <span>ددلاین های شما</span>
+        </div>
+
+        <div id="deadlines-timeline">
+
+          <div id="deadline-view">
+            <div class="deadlines-state" id="free-deadlines">
+              <div id="deadlines-check-view">
+                <i class="material-icons">check</i>
+              </div>
+              <span id="vacation-span">
+                شما در روز انتخاب شده هیچ ددلاینی ندارید.
+              </span>
+            </div>
+
+            <div class="deadlines-state" id="show_deadlines">
+              <ul id="deadlines-view-ul">
+              </ul>
+            </div>
+          </div>
+
+          <div id="deadlines-chart">
+
+            <div id="deadlines-line">
+              <i></i>
+            </div>
+
+            <ul id="deadlines-ul">
+
+              <li class="deadlines-li" id="deadline-1">
+                <span class="deadlines-dates" id="deadlines-1"></span>
+
+                <div class="deadlines-circles-parent">
+                  <div id="deadline-circle-border-1" class="deadlines-circle">
+                    <div id="deadline-circle-body-1" class="deadlines-li-circle"></div>
+                  </div>
+              </div>
+              </li>
+
+
+              <li class="deadlines-li" id="deadline-2">
+                <span class="deadlines-dates" id="deadlines-2"></span>
+
+                <div class="deadlines-circles-parent">
+                  <div id="deadline-circle-border-2" class="deadlines-circle">
+                    <div id="deadline-circle-body-2" class="deadlines-li-circle"></div>
+                  </div>
+              </div>
+              </li>
+
+
+              <li class="deadlines-li" id="deadline-3">
+                <span class="deadlines-dates" id="deadlines-3"></span>
+
+                <div class="deadlines-circles-parent">
+                  <div id="deadline-circle-border-3" class="deadlines-circle">
+                    <div id="deadline-circle-body-3" class="deadlines-li-circle"></div>
+                  </div>
+              </div>
+              </li>
+
+
+              <li class="deadlines-li" id="deadline-4">
+                <span class="deadlines-dates" id="deadlines-4"></span>
+
+                <div class="deadlines-circles-parent">
+                  <div id="deadline-circle-border-4" class="deadlines-circle">
+                    <div id="deadline-circle-body-4" class="deadlines-li-circle"></div>
+                  </div>
+              </div>
+              </li>
+
+
+
+              <li class="deadlines-li" id="deadline-5">
+                <span class="deadlines-dates" id="deadlines-5"></span>
+
+                <div class="deadlines-circles-parent">
+                  <div id="deadline-circle-border-5" class="deadlines-circle">
+                    <div id="deadline-circle-body-5" class="deadlines-li-circle"></div>
+                  </div>
+              </div>
+              </li>
+
+
+              <li class="deadlines-li" id="deadline-6">
+                <span class="deadlines-dates" id="deadlines-6"></span>
+
+                <div class="deadlines-circles-parent">
+                  <div id="deadline-circle-border-6" class="deadlines-circle">
+                    <div id="deadline-circle-body-6" class="deadlines-li-circle"></div>
+                  </div>
+              </div>
+              </li>
+
+
+              <li class="deadlines-li" id="deadline-7">
+                <span class="deadlines-dates" id="deadlines-7"></span>
+
+                <div class="deadlines-circles-parent">
+                  <div id="deadline-circle-border-7" class="deadlines-circle">
+                    <div id="deadline-circle-body-7" class="deadlines-li-circle"></div>
+                  </div>
+              </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div id="tasks">
+        <div id="tasks-display">
+          <span id="tasks-header">
+            تسک های امروز
+          </span>
+          <!-- If there is not any tasks to do -->
+          <div id="not_tasks">
+            <img src="/panel/dashboard/img/umbrella.png">
+            <br>
+            <span id="not_tasks_span">
+              استراحت کنید
+            </span>
+          </div>
+          <!-- End of not tasks statement -->
+
+          <!-- add task statements -->
+
+          <div id="add-task-div">
+            <textarea maxlength="80" class="task-input-class" id="task-input" placeholder="تسک را وارد کنید..."></textarea>
+
+            <input class="task-input-class" id="task-date-picker">
+
+            <br/>
+
+
+            <select id="task-type">
+              <option class="task-type-option" value="self">شخصی</option>
+            </select>
+          </div>
+
+          <!-- testing an example for showing tasks -->
+
+          <div id="tasks-view">
+            <ul id="tasks-ul"></ul>
+          </div>
+
+
+          <!-- End of add tasks statements -->
+
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" id="add-task">
+            <i class="material-icons">add</i>
+          </button>
+
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" id="ok-task">
+            <i class="material-icons">check</i>
+          </button>
+
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" id="cancel-task">
+            <i class="material-icons">clear</i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+>>>>>>> user-panel
     <div class="boxes" id="todo-card">
 
       <div class="box-headers" id="todo-header">
@@ -155,6 +331,7 @@
           <span class="persian" id="account-username">
             نام کاربری: <span id="account-username-content"></span>
           </span>
+<<<<<<< HEAD
 
           <span class="persian" id="account-teams">
             دنبال کنندگان:
@@ -162,6 +339,42 @@
           </span>
         </div>
 
+=======
+          <br>
+          <span class="persian" id="account-followers">
+            دنبال کنندگان:
+            <span id="account-followers-count"></span>
+          </span>
+          <br>
+          <span class="persian" id="account-following">
+            دنبال شدگان:
+            <span id="account-following-count"></span>
+          </span>
+        </div>
+
+      </div>
+
+      <div id="account-teams">
+        <span id="account-teams-span" class="persian">تیم ها</span>
+
+        <ul id="account-teams-ul"></ul>
+
+        <i class="fa fa-exclamation-triangle fa-sm" id="team-notfound">
+          <span>در هیچ تیمی شما
+            عضو نیستید!</span>
+        </i>
+
+
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="add-team" onClick="window.location = '/teams';">
+          تیم جدید<i class="material-icons add-todo-i" style="font-size: 20px; margin-top: 3px; color: #218601;">add</i> کنید!
+        </button>
+
+
+      </div>
+    </div>
+
+    <div class="boxes" id="activities">
+>>>>>>> user-panel
 
       </div>
 
@@ -170,12 +383,26 @@
   </div>
 
 
+<<<<<<< HEAD
 
   <script src="/panel/dashboard/js/right-menu.js"></script>
   <script src="/panel/dashboard/js/dropdown.js"></script>
   <script src="/panel/dashboard/js/logout.js"></script>
   <script src="/panel/dashboard/js/todo.js"></script>
 
+=======
+  <script src="/js/date-converter.js"></script>
+  <script src="/panel/dashboard/js/getDeadlines.js"></script>
+  <script src="/panel/dashboard/js/getTasks.js"></script>
+  <script src="/panel/dashboard/js/right-menu.js"></script>
+  <script src="/panel/dashboard/js/dropdown.js"></script>
+  <script src="/panel/shared-files/js/logout.js"></script>
+  <script src="/panel/dashboard/js/changePhoto.js"></script>
+  <script src="/panel/dashboard/js/todo.js"></script>
+  <script src="/panel/dashboard/js/getTeams.js"></script>
+  <script src="/panel/dashboard/js/activities.js"></script>
+  <script src="/panel/dashboard/js/particles.js"></script>
+>>>>>>> user-panel
 
 </body>
 </html>

@@ -23,7 +23,16 @@ const sendPicture = require('./api_modules/sendPicture.js');
 const revokeToken = require('./api_modules/revokeToken.js');
 const deleteTodo = require('./api_modules/deleteTodo.js');
 const addTodo = require('./api_modules/addTodo.js');
+<<<<<<< HEAD
 
+=======
+const getDeadlines = require('./api_modules/getDeadlines.js');
+const addDeadline = require('./api_modules/addDeadline.js');
+const deleteDeadline = require('./api_modules/deleteDeadline.js');
+const getSevenDaysDeadlines = require('./api_modules/getSevenDaysDeadlines.js');
+const addTeam = require('./api_modules/addTeam.js');
+const deleteTeam = require('./api_modules/deleteTeam.js');
+>>>>>>> user-panel
 
 let apiLoader = {
   changePassword: function(db, app){
@@ -105,6 +114,33 @@ let apiLoader = {
   addTodo: function (db, app){
     var method = addTodo.addTodo(db, app);
     return method;
+<<<<<<< HEAD
+=======
+  },
+  getDeadlines: function (db, app){
+    var method = getDeadlines.getDeadlines(db, app);
+    return method;
+  },
+  addDeadline: function (db, app){
+    var method = addDeadline.addDeadline(db, app);
+    return method;
+  },
+  deleteDeadline: function (db, app){
+    var method = deleteDeadline.deleteDeadline(db, app);
+    return method;
+  },
+  getSevenDaysDeadlines: function (db, app){
+    var method = getSevenDaysDeadlines.getSevenDaysDeadlines(db, app);
+    return method;
+  },
+  addTeam: function (db, app){
+    var method = addTeam.addTeam(db, app);
+    return method;
+  },
+  deleteTeam: function (db, app){
+    var method = deleteTeam.deleteTeam(db, app);
+    return method;
+>>>>>>> user-panel
   }
 }
 

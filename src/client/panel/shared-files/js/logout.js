@@ -11,7 +11,7 @@ $(document).ready(() => {
     $.post('/api/revokeToken', {token: token}, (data) => {
       if (data.reqStatus == 'done'){
         document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        window.location=window.location.href.split('/panel')[0];
+        window.location='/';
       }
     });
   });

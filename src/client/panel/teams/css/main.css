@@ -1,0 +1,221 @@
+#container {
+  width: 100%;
+  display: flex;
+}
+
+#particles-js {
+  position: absolute;
+  padding: 2% 2%;
+  width: 96%;
+  height: 96%;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.boxes {
+  background: #f3f3f3;
+  border-radius: 3px;
+  float: right;
+  -webkit-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 33px 0px rgba(0,0,0,0.75);
+}
+
+#teams-section {
+  background: #f3f3f3;
+  width: 80%;
+  margin: 20px auto;
+  opacity: 0.9;
+  padding: 0 20px;
+}
+
+#teams-header {
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid #ccc;
+}
+
+#teams-header span {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px auto;
+  float: right;
+}
+
+#teams-view {
+  padding: 10px 0;
+  float: right;
+  width: 100%;
+  direction: rtl;
+}
+
+.list-options {
+  border: 0;
+  color: #4caf50;
+  float: left;
+  background-color: Transparent;
+}
+
+.list-options:focus {
+  outline: none;
+}
+
+.list-options:hover {
+  cursor: pointer;
+}
+
+#team-notfound {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+#add-team-box {
+  direction: rtl;
+  float: right;
+  display: none;
+}
+
+#add-team-box form {
+  float: right;
+}
+
+#add-team-box span {
+  float: right;
+  margin-left: 20px;
+  line-height: 100%;
+}
+
+#add-team-name-div {
+  float: right;
+  max-width: 200px;
+}
+
+#add-team-name {
+  direction: rtl;
+  text-align: right;
+  font-size: 18px;
+  font-family: yekan;
+}
+
+#add-team-lable {
+  float: right;
+  text-align: right;
+  font-size: 18px;
+}
+
+#add-team-img {
+  float: right;
+  margin-right: 20px;
+  padding: 18px 0;
+}
+
+#add-team-img span {
+  margin-top: 20px;
+}
+
+#add-submit {
+  height: 30px;
+  font-family: yekan;
+  font-size: 18px;
+  background: #4caf50;
+  margin-right: 20px;
+}
+
+#add-team-img i {
+  width: 100px;
+}
+
+#add-team-image {
+  z-index: 999;
+  line-height: 0;
+  font-size: 50px;
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity = 0);
+  -ms-filter: "alpha(opacity=0)";
+  cursor: pointer;
+  _cursor: hand;
+  margin: 0;
+  padding:0;
+  left:0;
+  width: 100%;
+  top: 0;
+}
+
+#add-team-image-lable {
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  text-align:center;
+  background-color:#83b81a;
+  color:#fff;display:block;
+  font-size:18px;
+  line-height:30px;
+  float:left;
+  width: 100%;
+  padding: 0;
+  height: 30px;
+}
+
+#add-submit-parent {
+  float: right;
+  padding: 18px 0;
+}
+
+#teams-list {
+  display: none;
+  float: right;
+  width: 100%;
+}
+
+#teams-list-ul {
+  float: right;
+  width: 100%;
+  padding: 0;
+}
+
+.teams-list-li {
+  float: right;
+  width: 150px;
+  list-style: none;
+  background: #c0c0c0;
+  border-radius: 4px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 0 0;
+  position: relative;
+}
+
+.teams-list-li img {
+  float: left;
+  width: auto;
+  max-width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.teams-list-li i {
+  position: absolute;
+  float: right;
+  top: 5px;
+  right: 5px;
+}
+
+.teams-list-name {
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  float: right;
+  font-family: Poppins-regular;
+  font-size: 16px;
+  background: #ababab;
+  border-radius: 0 0 4px 4px;
+}
+
+.teams-list-li:hover {
+  cursor: pointer;
+}

@@ -1,3 +1,4 @@
+const colors = require('colors');
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
@@ -6,7 +7,7 @@ const app = express();
 const {db, smtpTransport} = require("./config.js");
 const api = require("./API/api.js");
 const auth = require("./src/server/auth/auth.js");
-const panel = require("./src/server/panel/dashboard.js");
+const panel = require("./src/server/panel/launcher.js");
 const cookieParser = require('cookie-parser');
 
 
@@ -65,9 +66,18 @@ api.charge(db, app);
 api.sendPicture(app);
 api.deleteTodo(db, app);
 api.addTodo(db, app);
+<<<<<<< HEAD
 
+=======
+api.getDeadlines(db, app);
+api.addDeadline(db, app);
+api.deleteDeadline(db, app);
+api.getSevenDaysDeadlines(db, app);
+api.addTeam(db, app);
+api.deleteTeam(db, app);
+>>>>>>> user-panel
 
 // Panel
-panel.dashboard(db, app);
+panel.launcher(db, app);
 
 app.listen(8545);
