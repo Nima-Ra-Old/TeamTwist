@@ -223,9 +223,9 @@
 
 #deleteTeamList {
   width: 100%;
-  position: absolute;
   float: right;
   display: flex;
+  position: absolute;
 }
 
 #deleteTeamList ul {
@@ -239,7 +239,6 @@
   -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
-  filter: brightness(100%);
   display: none;
 }
 
@@ -304,4 +303,37 @@
 
 .deleteTeam i {
   color: #499e5d;
+}
+
+#cancelLi {
+  background: #0ab777;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  float: right;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#cancelButton {
+  font-size: 20px;
+  font-family: yekan;
+  width: 100%;
+  border: none;
+  background: #0ab777;
+  color: #fff;
+  height: 40px;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#cancelButton:hover {
+  cursor: pointer;
+}
+
+#cancelButton:focus {
+  outline: none;
 }

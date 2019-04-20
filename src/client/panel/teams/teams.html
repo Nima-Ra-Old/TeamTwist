@@ -104,6 +104,7 @@
   <div id="container">
     <div id="particles-js"></div>
 
+
     <div id="teams-section" class="boxes">
       <div id="teams-header">
         <span>تیم های شما</span>
@@ -113,8 +114,8 @@
         <button class="list-options" id="add-team-button">
           <i class="fas fa-plus"></i>
         </button>
-        <button class="list-options" id="add-team-button">
-          <i onClick="enableDeleting()" class="fas fa-trash"></i>
+        <button class="list-options" id="delete-team-button">
+          <i id="enableDeleting" class="fas fa-trash"></i>
         </button>
 
 
@@ -127,19 +128,7 @@
         </div>
 
         <div id="deleteTeamList">
-          <ul>
-            <li class="deleteTeamItem">
-              <div class="deleteTeamItemInfo">
-                <img src="http://127.0.0.1:8545/api/photos?teamPic=5040171">
-                <span>Team Twist</span>
-              </div>
-              <div class="deleteTeamParent">
-                <button class="deleteTeam">
-                  <i onClick="deleteTeam()" class="fas fa-trash"></i>
-                </button>
-              </div>
-            </li>
-          </ul>
+          <ul id="deleteTeamUL"></ul>
         </div>
 
         <div id="add-team-box">
@@ -161,6 +150,7 @@
 
       </div>
     </div>
+  </div>
 
   <!-- Sahred folder files -->
   <script src="/panel/shared-files/js/logout.js"></script>
@@ -171,6 +161,7 @@
   <!-- Special scripts -->
   <script src="/panel/teams/js/particles.js"></script>
   <script src="/panel/teams/js/getTeams.js"></script>
+  <script src="/panel/teams/js/deleteTeams.js"></script>
   <script src="/panel/teams/js/addTeam.js"></script>
   <script src="/panel/teams/js/manager.js"></script>
 </body>
