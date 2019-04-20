@@ -15,6 +15,8 @@ function redirect_to(req, res, db, app, destination) {
             res.sendFile('/src/client/panel/dashboard/dashboard.html', {root: './'});
           } else if (destination == 'teams') {
             res.sendFile('/src/client/panel/teams/teams.html', {root: './'});
+          } else if (destination == 'teamViewer') {
+            res.sendFile('/src/client/panel/teamProfile/team.html', {root: './'});
           }
         }
         else {
@@ -31,6 +33,10 @@ function launcher(db, app) {
 
   app.get('/teams', (req, res, next) => {
     redirect_to(req, res, db, app, 'teams');
+  });
+
+  app.get('/team', (req, res, next) => {
+    redirect_to(req, res, db, app, 'teamViewer');
   });
 }
 
