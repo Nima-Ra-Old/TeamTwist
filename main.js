@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const colors = require('colors');
 const express = require('express');
 const session = require('express-session');
