@@ -16,6 +16,7 @@
     "md5": "^2.2.1",
     "mysql": "^2.15.0",
     "nodemailer": "^4.6.5",
-    "cookie-parser": "latest"
+    "cookie-parser": "latest",
+    "multer": "latest"
   }
 }
